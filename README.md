@@ -22,5 +22,5 @@ dotnet run -- --help
 dotnet run -- PrefixSpan --file <file-path> --support <min-support>
 ```
 
-### Note
+### A note on file formats:
 Both algorithms expect input files to be in SPMF format. See http://www.philippe-fournier-viger.com/spmf/
