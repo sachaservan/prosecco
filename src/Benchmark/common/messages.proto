@@ -1,0 +1,54 @@
+// C:\Users\ez\.nuget\packages\grpc.tools\1.2.2\tools\windows_x64\protoc.exe -IBenchmark/common --csharp_out Benchmark/common/grpc --grpc_out Benchmark/common/grpc Benchmark/common/messages.proto --plugin=protoc-gen-grpc=C:\Users\ez\.nuget\packages\grpc.tools\1.2.2\tools\windows_x64\grpc_csharp_plugin.exe
+
+syntax = "proto3";
+
+package benchmark;
+
+service Benchmarker {
+  rpc runBenchmark (BenchmarkRequest) returns (stream BenchmarkReply) {}
+  rpc monitorMemory (MemoryRequest) returns (stream MemoryReply) {}
+}
+
+enum Algorithm {
+    ProSecCo = 0;
+    PrefixSpan = 1;
+    Undefined = 2;
+}
+
+enum ReplyType {
+    Complete = 0;
+    Batch = 1;
+}
+
+message MemoryRequest {
+}
+
+
+message BenchmarkRequest {
+    string id = 1;
+    Algorithm Algorithm = 2;
+    double ErrorTolerance = 3;
+    string File = 4;
+    double Support = 5;
+    int32 SampleSize = 6;
+    int32 K = 7;
+    bool UseTopK = 8;
+    int32 DBSize = 9;
+    bool ShutdownServer = 10;
+}
+
+message MemoryReply { 
+    int64 MemoryUsgageInBytes = 1;
+}
+
+message BenchmarkReply {
+    string message = 1;
+    string SequencesInJson = 3;
+    int32 Iteration = 4;
+    int32 NrProcessedRecords = 5;
+    double Error = 6;
+    int64 BatchRuntimeInMillis = 7;
+    int64 TotalRuntimeInMillis = 8;
+    ReplyType ReplyType = 9;
+}
+

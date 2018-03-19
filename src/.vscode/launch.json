@@ -1,0 +1,51 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+
+        {
+            "name": "ProSecCo",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceRoot}/ProSecCo/bin/Debug/netcoreapp1.1/ProSecCo.dll",
+            "args": ["-f", "/home/azuka/Desktop/bigdata/DataMining/data/sequence-test-bms-webview.txt", "-s", "0.01", "-b", "-z", "12000"],
+            "cwd": "${workspaceRoot}/ProSecCo",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Benchmark Server",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildServer",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceRoot}/Benchmark/server/bin/Debug/netcoreapp1.1/server.dll",
+            "args": ["-p", "50001"],
+            "cwd": "${workspaceRoot}/Benchmark/server",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Benchmark Client",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildClient",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceRoot}/Benchmark/client/bin/Debug/netcoreapp1.1/client.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/Benchmark/client",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

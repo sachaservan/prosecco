@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "buildServer",
+            "command": "dotnet build",
+            "args": [
+                "${workspaceRoot}/Benchmark/server/server.csproj"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "buildClient",
+            "command": "dotnet build",
+            "args": [
+                "${workspaceRoot}/Benchmark/client/client.csproj"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

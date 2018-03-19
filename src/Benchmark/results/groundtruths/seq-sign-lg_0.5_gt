@@ -1,0 +1,3875 @@
+[
+  {
+    "Support": 136000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 132800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 132800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 130400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 127600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 125200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 125200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 123200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 123200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 120200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 119000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 118000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 116600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 116600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 115600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 115600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 115000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 114800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 114800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 113800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 125200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 113800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 110400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 110400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 109800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 109800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 107800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 107800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 107200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 107200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 106400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 106400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 105600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 105600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 105600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 105600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 105400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 105400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 104800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 104800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 104000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 114800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 104000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 103800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 103800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 103400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 103400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 102600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 27,
+            "Frequency": 102600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 101400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10,
+            "Frequency": 101400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 98200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 98200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 97600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 97600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 97200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 109800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 97200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 97200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 97200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 97200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 97200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 96800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 107200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 96800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 96800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 96800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 96800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 96800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 95800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 104800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 95800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 95600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 110400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 95600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 95600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 95600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 95200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 13,
+            "Frequency": 95200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 95000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 95000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 94800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 22,
+            "Frequency": 94800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 94600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 94600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 93200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 93200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 92400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 125200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 92400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 92000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 92000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 91800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 91800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 91800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 91800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 91600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 91600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 91200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 103400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 91200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 91000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 11,
+            "Frequency": 91000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 90600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 90600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 90400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 90400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 90000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 98200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 90000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 89600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10,
+            "Frequency": 101400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 89600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 89200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 97600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 89200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 88800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 96800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 88800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 88600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 27,
+            "Frequency": 102600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 88600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 88400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 23,
+            "Frequency": 88400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 88200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 97200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 88200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 88000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 88000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 88000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 88000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 87800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 118,
+            "Frequency": 87800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 87600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 96800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 87600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 87400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 97200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 87400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 87400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 97600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 87400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 110400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 86600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 94600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 86600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 86400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 94600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 86200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 114800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 86000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 86000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 86000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 85800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 85800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 85600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 20,
+            "Frequency": 85600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 85400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 85400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 85000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 28,
+            "Frequency": 85000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 84600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 19,
+            "Frequency": 84600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 84200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 84200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 84000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 14,
+            "Frequency": 84000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 84000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 246,
+            "Frequency": 84000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 83600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 95600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 83600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 83400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 93200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 83400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 83400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 83400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 83400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 31,
+            "Frequency": 83400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 82800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 22,
+            "Frequency": 94800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 82800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 82600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 98200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 82600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 82600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 90400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 82600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 82200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 91600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 82200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 125200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 81600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 92000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 81600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 90400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 81600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 13,
+            "Frequency": 95200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 81600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 125200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 92400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 81400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 81400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 81000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 81000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 80600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 118,
+            "Frequency": 80600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 80600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 80600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 80200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 80200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 91800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 79800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 79800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 97200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 79800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 97600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 89200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 79600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 88000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 79600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 79600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 79400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 107200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 79200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 79200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 88000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 79000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 79000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 27,
+            "Frequency": 79000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 90600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 118,
+            "Frequency": 87800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 15,
+            "Frequency": 78800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 27,
+            "Frequency": 102600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 78600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 78600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 246,
+            "Frequency": 84000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 88000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 110400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 86600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 94600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 86600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 86000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 11,
+            "Frequency": 91000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 78200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 78200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 118,
+            "Frequency": 87800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 78200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 110400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 78000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 78000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10,
+            "Frequency": 101400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 78000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 77800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 77800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 77600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 77600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 77600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 77600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 77400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 77400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 4,
+            "Frequency": 76800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 118,
+            "Frequency": 76600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 86400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 76600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 27,
+            "Frequency": 76400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 78,
+            "Frequency": 76400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 76200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 76200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 104800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 76200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 98200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 82600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 75800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 114800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 86000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 75600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 246,
+            "Frequency": 75600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 119000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 75400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 120200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 27,
+            "Frequency": 75400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 110,
+            "Frequency": 75200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 75200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 75200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 110400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 75200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 74800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 74800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 83400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 74800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 10,
+            "Frequency": 74800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 74600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 115000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 85400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 74600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 90400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 82600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 74400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 92000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 74200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 32,
+            "Frequency": 74200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 85800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 74000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 74000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 84200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 74000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 73800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 130400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 35,
+            "Frequency": 91800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 73800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 73800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 29,
+            "Frequency": 73800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 36,
+            "Frequency": 105600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 245,
+            "Frequency": 73800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73600,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 28,
+            "Frequency": 85000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 73600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 98200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 73400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73400,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 26,
+            "Frequency": 91600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 73400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 41,
+            "Frequency": 73200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 1,
+            "Frequency": 136000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 114800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 73200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 246,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 22,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 97200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 79800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 8,
+            "Frequency": 127600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 17,
+            "Frequency": 97200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 9,
+            "Frequency": 118000
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 117,
+            "Frequency": 86800
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 79400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 143,
+            "Frequency": 125200
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 144,
+            "Frequency": 81600
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 73000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 23,
+            "Frequency": 88400
+          }
+        ]
+      },
+      {
+        "Items": [
+          {
+            "Value": 253,
+            "Frequency": 73000
+          }
+        ]
+      }
+    ]
+  }
+]

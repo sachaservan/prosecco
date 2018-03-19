@@ -1,0 +1,158 @@
+[
+  {
+    "Support": 365800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 33449,
+            "Frequency": 365800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 362300,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 12895,
+            "Frequency": 362300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 361200,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 33469,
+            "Frequency": 361200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 344900,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10315,
+            "Frequency": 344900
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 279700,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10307,
+            "Frequency": 279700
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 237100,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10311,
+            "Frequency": 237100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 226800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 12487,
+            "Frequency": 226800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 204900,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 12483,
+            "Frequency": 204900
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 200900,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 10295,
+            "Frequency": 200900
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 194800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 12703,
+            "Frequency": 194800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 179300,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 12663,
+            "Frequency": 179300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 178800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 12679,
+            "Frequency": 178800
+          }
+        ]
+      }
+    ]
+  }
+]

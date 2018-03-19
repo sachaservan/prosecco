@@ -1,0 +1,8 @@
+/home/azuka/Desktop/ProSecCo/src/Shared/bin/Release/netcoreapp1.1/Shared.deps.json
+/home/azuka/Desktop/ProSecCo/src/Shared/bin/Release/netcoreapp1.1/Shared.dll
+/home/azuka/Desktop/ProSecCo/src/Shared/bin/Release/netcoreapp1.1/Shared.pdb
+/home/azuka/Desktop/ProSecCo/src/Shared/obj/Release/netcoreapp1.1/Shared.csproj.CoreCompileInputs.cache
+/home/azuka/Desktop/ProSecCo/src/Shared/obj/Release/netcoreapp1.1/Shared.AssemblyInfoInputs.cache
+/home/azuka/Desktop/ProSecCo/src/Shared/obj/Release/netcoreapp1.1/Shared.AssemblyInfo.cs
+/home/azuka/Desktop/ProSecCo/src/Shared/obj/Release/netcoreapp1.1/Shared.dll
+/home/azuka/Desktop/ProSecCo/src/Shared/obj/Release/netcoreapp1.1/Shared.pdb
