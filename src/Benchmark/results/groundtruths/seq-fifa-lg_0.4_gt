@@ -1,0 +1,67 @@
+[
+  {
+    "Support": 438800,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 30,
+            "Frequency": 438800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 413150,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 18,
+            "Frequency": 413150
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 411000,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 13,
+            "Frequency": 411000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 409550,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 90,
+            "Frequency": 409550
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Support": 409300,
+    "Transactions": [
+      {
+        "Items": [
+          {
+            "Value": 2,
+            "Frequency": 409300
+          }
+        ]
+      }
+    ]
+  }
+]

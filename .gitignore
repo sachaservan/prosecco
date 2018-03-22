@@ -8,7 +8,7 @@
 ./vscode/*
 .vscode
 
-src/Benchmark/results/*
+src/Benchmark/results/fig/*
 
 src/Shared/obj/*
 src/Shared/bin/*
