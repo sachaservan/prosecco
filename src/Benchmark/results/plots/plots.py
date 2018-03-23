@@ -10,6 +10,7 @@ import json
 import datetime
 import matplotlib.dates as mdates
 import os.path
+import pickle
 
 sns.set(context='paper', style={'axes.axisbelow': True,
     'axes.edgecolor': '.8',
@@ -36,7 +37,7 @@ sns.set(context='paper', style={'axes.axisbelow': True,
     'ytick.color': '.15',
     'ytick.direction': u'out',
     'ytick.major.size': 0.0,
-    'ytick.minor.size': 0.0}, font_scale = 1.3)
+    'ytick.minor.size': 0.0}, font_scale = 2)
 
 flatui = ['#28aad5', '#b24d94', '#38ae97' ,'#ec7545']
 
@@ -45,7 +46,7 @@ def minutes_second_formatter(value, tick_number):
     return '%02d:%02d' % (m, s)
 
 def second_formatter(value, tick_number):
-    return value / 1000.0
+    return int(value / 1000.0)
 
 def loadPrecisionRecallData(fn):
     d = {'Batch': [], 'Run': [], 'Precision' : [], 'Recall' : [] }
@@ -207,7 +208,7 @@ def plot_ts(df, ax, color, yLabel, xLabel, width, label, linestyle = '-', showMa
 
     if not showMax:
         ax.fill_between(valid_x, valid_y1, valid_y2, facecolor=color, alpha=0.4, interpolate=True)
-    ax.plot(line_x, line_y, color=color, linewidth=1.5, linestyle=linestyle, label=label)#, label=yLabel)
+    ax.plot(line_x, line_y, color=color, linewidth=3, linestyle=linestyle, label=label)#, label=yLabel)
     
 def getRuntime(fn):
     data = json.load(open(fn))
@@ -218,7 +219,7 @@ def getRuntime(fn):
     return runtimes
     
 
-def main(id, file_id, title, show):
+def main(runtimes, id, file_id, title, show):
     prefixspan = '../ps-' + id + '.json'
     iprefixspan = '../u_ips-' + id + '.json'
     
@@ -227,6 +228,9 @@ def main(id, file_id, title, show):
     runtimes_ips = getRuntime(iprefixspan)
     
     print(title, np.mean(runtimes_ps), np.std(runtimes_ps), np.mean(runtimes_ips), np.std(runtimes_ips))
+
+    runtimes['prefixspan'][title] = runtimes_ps
+    runtimes['prosecco'][title] = runtimes_ips
     
     
     tp = loadTruePositives(prefixspan)
@@ -238,17 +242,17 @@ def main(id, file_id, title, show):
     d = loadMemoryData(iprefixspan)
     df = pd.DataFrame(data=d)   
     df = df.sort_values(by=['Time'])
-    plot_ts(df, ax1, flatui[0], 'Memory', 'Time', -1, 'ProSecCo')
+    plot_ts(df, ax1, flatui[0], 'Memory', 'Time', -1, 'ProSecCo', linestyle = '-')
 
     d = loadMemoryData(prefixspan)
     df = pd.DataFrame(data=d)       
     df = df.sort_values(by=['Time'])
-    plot_ts(df, ax1, flatui[1], 'Memory', 'Time', -1, 'PrefixSpan')
+    plot_ts(df, ax1, flatui[1], 'Memory', 'Time', -1, 'PrefixSpan', linestyle = ':')
 
     ax1.set_ylabel('Memory (GB)')
     ax1.set_xlabel('Time (mm:ss)')
     ax1.xaxis.set_major_formatter(plt.FuncFormatter(minutes_second_formatter))
-    ax1.legend(loc='upper right')
+    ax1.legend(loc='lower right')
     
     f.savefig('../fig/' + file_id + '-memory.pdf', bbox_inches='tight')
     plt.tight_layout()
@@ -306,13 +310,7 @@ def main(id, file_id, title, show):
     d = loadRawData(iprefixspan, 'RuntimePerBatch', 'RuntimePerBatch')
     df = pd.DataFrame(data=d)  
     df = df.sort_values(by=['Batch'])
-    plot_ts(df, ax4, flatui[0], 'RuntimePerBatch', 'Batch', 1, 'ProSecCo', displayCumsum=True)
-    batchRange = [df['Batch'].min(), df['Batch'].max()]
-
-    d = loadRawData(prefixspan, 'RuntimePerBatch', 'RuntimePerBatch')
-    df = pd.DataFrame(data=d)  
-    df = df.sort_values(by=['Batch'])
-    ax4.plot(batchRange, [df['RuntimePerBatch'].max(), df['RuntimePerBatch'].max()], color=flatui[1], linewidth=1.5, linestyle='-', label='PrefixSpan')
+    plot_ts(df, ax4, flatui[0], 'RuntimePerBatch', 'Batch', 1, 'ProSecCo', displayCumsum=False, linestyle = '-')
 
     ax4.set_ylabel('Time (s)')
     ax4.set_xlabel('Block')
@@ -346,30 +344,36 @@ def main(id, file_id, title, show):
     if show:
         plt.show()
     plt.close('all')  
+
+    return (runtimes_ps, runtimes_ips)
     
 
 if __name__== '__main__':
     show = False
     
+    runtimes = {'prefixspan': {}, 'prosecco': {}}
+
     print('Dataset', 'PS-Mean', 'PS-STD', 'IPS-Mean', 'IPS-STD')
-    main('seq-bms-lg-0.03', 'bms-100-0_03', 'BMS-0.03', show)
-    main('seq-bms-lg-0.04', 'bms-100-0_04', 'BMS-0.04', show)
-    main('seq-bms-lg-0.05', 'bms-100-0_05', 'BMS-0.05', show)
+    (s, p) = main(runtimes, 'seq-bms-lg-0.03', 'bms-100-0_03', 'BMS-0.03', show)
+    (s, p) = main(runtimes, 'seq-bms-lg-0.04', 'bms-100-0_04', 'BMS-0.04', show)
+    (s, p) = main(runtimes, 'seq-bms-lg-0.05', 'bms-100-0_05', 'BMS-0.05', show)
 
-    main('seq-kosarak-lg-0.05', 'kosarak-50-0_05', 'KORSARAK-0.05', show)
-    main('seq-kosarak-lg-0.10', 'kosarak-50-0_10', 'KORSARAK-0.10', show)
-    main('seq-kosarak-lg-0.15', 'kosarak-50-0_15', 'KORSARAK-0.15', show)
+    (s, p) = main(runtimes, 'seq-kosarak-lg-0.05', 'kosarak-50-0_05', 'KORSARAK-0.05', show)
+    (s, p) = main(runtimes, 'seq-kosarak-lg-0.10', 'kosarak-50-0_10', 'KORSARAK-0.10', show)
+    (s, p) = main(runtimes, 'seq-kosarak-lg-0.15', 'kosarak-50-0_15', 'KORSARAK-0.15', show)
 
-    main('seq-sign-lg-0.40', 'sign-200-0_40', 'SIGN-0.40', show)
-    main('seq-sign-lg-0.50', 'sign-200-0_50', 'SIGN-0.50', show)
-    main('seq-sign-lg-0.60', 'sign-200-0_60', 'SIGN-0.60', show)
+    (s, p) = main(runtimes, 'seq-sign-lg-0.40', 'sign-200-0_40', 'SIGN-0.40', show)
+    (s, p) = main(runtimes, 'seq-sign-lg-0.50', 'sign-200-0_50', 'SIGN-0.50', show)
+    (s, p) = main(runtimes, 'seq-sign-lg-0.60', 'sign-200-0_60', 'SIGN-0.60', show)
     
-    main('seq-bible-lg-0.40', 'bible-200-0_40', 'BIBLE-0.40', show)
-    main('seq-bible-lg-0.50', 'bible-200-0_50', 'BIBLE-0.50', show)
-    main('seq-bible-lg-0.60', 'bible-200-0_60', 'BIBLE-0.60', show)
+    (s, p) = main(runtimes, 'seq-bible-lg-0.40', 'bible-200-0_40', 'BIBLE-0.40', show)
+    (s, p) = main(runtimes, 'seq-bible-lg-0.50', 'bible-200-0_50', 'BIBLE-0.50', show)
+    (s, p) = main(runtimes, 'seq-bible-lg-0.60', 'bible-200-0_60', 'BIBLE-0.60', show)
     
-    main('seq-fifa-lg-0.3', 'fifa-50-0_30', 'FIFA-0.30', show)
-    main('seq-fifa-lg-0.35', 'fifa-50-0_35', 'FIFA-0.35', show)
-    main('seq-fifa-lg-0.4', 'fifa-50-0_40', 'FIFA-0.40', show)
+    (s, p) = main(runtimes, 'seq-fifa-lg-0.3', 'fifa-50-0_30', 'FIFA-0.30', show)
+    (s, p) = main(runtimes, 'seq-fifa-lg-0.35', 'fifa-50-0_35', 'FIFA-0.35', show)
+    (s, p) = main(runtimes, 'seq-fifa-lg-0.4', 'fifa-50-0_40', 'FIFA-0.40', show)
     
+    with open('runtimes.pickle', 'wb') as handle:
+        pickle.dump(runtimes, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
