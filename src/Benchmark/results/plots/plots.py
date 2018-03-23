@@ -252,7 +252,7 @@ def main(runtimes, id, file_id, title, show):
     ax1.set_ylabel('Memory (GB)')
     ax1.set_xlabel('Time (mm:ss)')
     ax1.xaxis.set_major_formatter(plt.FuncFormatter(minutes_second_formatter))
-    ax1.legend(loc='lower right')
+    ax1.legend(loc='center right')
     
     f.savefig('../fig/' + file_id + '-memory.pdf', bbox_inches='tight')
     plt.tight_layout()
