@@ -87,7 +87,7 @@ public class ProSecCo : PrefixSpan
         {
             // update metadata on data (before pruning)
             var sequence = batch[i];
-            sequence.JustPrune(_fDictInitialBlock);
+            sequence.SortAndPrune(_fDictInitialBlock);
             _metadata.UpdateWithSequence(sequence);
             updateSupportMapWithSequence(sequence);
         }
@@ -121,7 +121,7 @@ public class ProSecCo : PrefixSpan
 
         bool firstBatch = _frequentSequences.Count == 0;
         
-        var blockSequences = getFrequentSequences();
+        var blockSequences = getFrequentSequences(!firstBatch);
 
         LastBlockPrefixSpanRuntime = runtimeTimer.ElapsedMilliseconds;
         runtimeTimer.Restart();
