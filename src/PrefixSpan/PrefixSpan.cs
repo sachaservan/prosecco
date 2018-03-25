@@ -40,7 +40,7 @@ public class PrefixSpan {
 
     protected void reset()
     {
-        _fDict = null;
+        //_fDict = null;
         _nextPseudoSequenceIndex = 0;
         _sequences = new List<Sequence>();
         _projections = new Dictionary<Item, List<PseudoSequence>>(Item.EqComp);    
@@ -74,9 +74,9 @@ public class PrefixSpan {
         return getFrequentSequences(false);
     }
 
-    protected List<Sequence> getFrequentSequences(bool useExistingFDict)
+    protected List<Sequence> getFrequentSequences(bool sorted)
     {
-        buildProjections(useExistingFDict);
+        buildProjections(sorted);
  
         List<Sequence> frequentSequences = new List<Sequence>();
         foreach(var item in _fDict.Keys)
@@ -93,7 +93,7 @@ public class PrefixSpan {
         return frequentSequences;
     }
 
-    protected void buildProjections(bool alreadySorted)
+    protected void buildProjections(bool sorted)
     {
         // contains all items in DB mapped to a pseudo projection for the item
         // or (single item sequence)
@@ -102,11 +102,12 @@ public class PrefixSpan {
         // extract the individual frequent items from the list of sequences
         _fDict = getGloballyFrequentItems(_sequences, _minCount);
 
-        if (alreadySorted) {
-        // sort sequence alphabetically while pruning
-        // infrequent items from the sequence
-        foreach(var sequence in _sequences)
-            sequence.SortAndPrune(_fDict);
+
+        if (!sorted) {
+            // sort sequence alphabetically while pruning
+            // infrequent items from the sequence
+            foreach(var sequence in _sequences)
+                sequence.SortAndPrune(_fDict);
         }
 
         // process sequences

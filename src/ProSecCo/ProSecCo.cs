@@ -25,8 +25,7 @@ public class ProSecCo : PrefixSpan
     // list of frequent patterns 
     protected Dictionary<Sequence, int> _frequentSequences;
     protected HashSet<Sequence> _misses;
-    protected List<Sequence> _sequenceInBlock;
-    protected ConcurrentDictionary<Item, int> _fDictInitialBlock;
+    protected ConcurrentDictionary<Item, int> _fDictLastBlock;
     protected double _errorTolerance;
     protected int _dbSize;
     protected int _blockSize;
@@ -79,7 +78,6 @@ public class ProSecCo : PrefixSpan
     {
         _itemSupportMap = new Dictionary<Item, int>(Item.EqComp);
         _currentBatchSize = batch.Count;
-        _sequenceInBlock = new List<Sequence>(batch.Count);
 
         _sequences = new List<Sequence>(batch);
 
@@ -87,14 +85,10 @@ public class ProSecCo : PrefixSpan
         {
             // update metadata on data (before pruning)
             var sequence = batch[i];
-            sequence.SortAndPrune(_fDictInitialBlock);
+            sequence.SortAndPrune(_fDictLastBlock);
             _metadata.UpdateWithSequence(sequence);
             updateSupportMapWithSequence(sequence);
         }
-
-        Sequence[] dest = new Sequence[batch.Count];
-        _sequences.CopyTo(dest);
-        _sequenceInBlock = new List<Sequence>(dest);
     }
     
     public Tuple<List<Sequence>, double> FrequentSequences(double minSupport) 
@@ -141,7 +135,7 @@ public class ProSecCo : PrefixSpan
         // in the current batch
         foreach(var candidate in _misses) 
         {               
-            foreach(var sequence in _sequenceInBlock)
+            foreach(var sequence in _sequences)
             {
                 if (candidate.IsSubSequenceOf(sequence))
                     _frequentSequences[candidate]++;  
@@ -152,7 +146,7 @@ public class ProSecCo : PrefixSpan
         LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
         runtimeTimer.Restart();
 
-        _fDictInitialBlock = _fDict;
+         _fDictLastBlock = _fDict;
 
         // if using the accumulate algorithm, prune based on global error, otherwise, prune based on batch error
         List<Sequence> sequences = extractAndPruneFrequentSequences(minCountGlobal, firstBatch);
