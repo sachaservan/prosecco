@@ -19,6 +19,14 @@ public class BatchMiner
     private bool _didGetTopKSupport;
     private int _k;
 
+    public ProSecCo Algorithm {
+        get {
+            return _algorithm;
+        }
+    }
+
+    Stopwatch _blockProcessingTimer = Stopwatch.StartNew();
+    public long LastBlockFileReadingAndParsingTime = 0;
 
     public async Task ProcessCSVFile(
         string filepath, 
@@ -35,6 +43,7 @@ public class BatchMiner
 
         Stopwatch killTimer = Stopwatch.StartNew();
 
+
         this._minSupport = minSup;
         this._k = k;
         this._mineTopK = mineTopK;
@@ -49,6 +58,7 @@ public class BatchMiner
         // open the CSV file 
         using (var reader = new StreamReader(File.OpenRead(filepath))) 
         {
+            _blockProcessingTimer.Restart();
             while(!reader.EndOfStream) {
                 // read the current line
                 string line = reader.ReadLine();
@@ -131,6 +141,10 @@ public class BatchMiner
         double minSupport,
         bool purge) 
     {       
+
+        LastBlockFileReadingAndParsingTime = _blockProcessingTimer.ElapsedMilliseconds;
+        _blockProcessingTimer.Restart();
+
         CurrentIteration++;
 
         if (batch.Count > 0)

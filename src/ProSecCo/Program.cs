@@ -89,7 +89,10 @@ namespace ConsoleApplication
                 sampleSize,
                 dbSize,
                 errorTolerance,
-                new FrequentSequencesBatchResult(onBatchResults),
+                async delegate(List<Sequence> frequentSequencePatterns, double error, int iteration) 
+                {
+                    onBatchResults(batchPatternMiner, frequentSequencePatterns, error, iteration);
+                },
                 killTime);
 
             batchStopwatch.Stop();
@@ -109,6 +112,7 @@ namespace ConsoleApplication
             return totalTimeElapsed;
         }
         private static async Task onBatchResults(
+            BatchMiner batchMiner,
             List<Sequence> frequentSequences, 
             double error,
             int iteration) 
@@ -128,6 +132,10 @@ namespace ConsoleApplication
             Console.WriteLine("Number of frequent sequences:     " + frequentSequences.Count + " sequences");
             Console.WriteLine("Error:  " + error);
             Console.WriteLine("Processing time: " + batchStopwatch.ElapsedMilliseconds + "ms");
+            Console.WriteLine("Runtime breakdown: ");
+            Console.WriteLine(" Reading & Parsing:    " + batchMiner.LastBlockFileReadingAndParsingTime + "ms");
+            Console.WriteLine(" PrefixSpan:           " + batchMiner.Algorithm.LastBlockPrefixSpanRuntime + "ms");
+            Console.WriteLine(" Subsequence matching: " + batchMiner.Algorithm.LastBlockSubsequenceMatchingRuntime + "ms");
             Console.WriteLine("-----------------------------------------------------------\n");
 
                

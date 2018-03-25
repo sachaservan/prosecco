@@ -32,6 +32,14 @@ public class ProSecCo : PrefixSpan
     protected int _blockSize;
     protected int _currentBatchSize;
 
+    // performance measurements
+    Stopwatch runtimeTimer = Stopwatch.StartNew();
+
+    public long LastBlockPrefixSpanRuntime = 0;
+    public long LastBlockSubsequenceMatchingRuntime = 0;
+    public long LastBlockPruningRuntime = 0;
+
+
     public ProSecCo(double minSupport, bool topK, double errorTolerance, int blockSize, int dbSize) 
         : base()
     {
@@ -91,6 +99,8 @@ public class ProSecCo : PrefixSpan
     
     public Tuple<List<Sequence>, double> FrequentSequences(double minSupport) 
     {  
+        runtimeTimer.Restart();
+
         _minSupport = minSupport;
         
         if (_metadata.NumTransactionsProcessed == 0) 
@@ -112,6 +122,10 @@ public class ProSecCo : PrefixSpan
         bool firstBatch = _frequentSequences.Count == 0;
         
         var blockSequences = getFrequentSequences();
+
+        LastBlockPrefixSpanRuntime = runtimeTimer.ElapsedMilliseconds;
+        runtimeTimer.Restart();
+
         foreach(var sequence in blockSequences)
         {
             _misses.Remove(sequence);
@@ -134,6 +148,9 @@ public class ProSecCo : PrefixSpan
             }
         }
 
+        LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
+        runtimeTimer.Restart();
+
         _fDictInitialBlock = _fDict;
 
         // if using the accumulate algorithm, prune based on global error, otherwise, prune based on batch error
@@ -142,6 +159,8 @@ public class ProSecCo : PrefixSpan
         // reset the PrefixSpan projections
         reset();
    
+        LastBlockPruningRuntime = runtimeTimer.ElapsedMilliseconds;
+
         return new Tuple<List<Sequence>, double>(sequences, error);
     }
 
