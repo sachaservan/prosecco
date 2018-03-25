@@ -139,23 +139,14 @@ public class ProSecCo : PrefixSpan
 
         // find the exact support of sequences which did not appear frequent
         // in the current batch
-        var pruned = false;
-
         foreach(var candidate in _misses) 
         {               
             foreach(var sequence in _sequenceInBlock)
             {
-                // avoid matching over all the items, just the 
-                // ones which are sure to appear
-                if (!pruned) {
-                    sequence.JustPrune(_fDictInitialBlock);
-                }
-
                 if (candidate.IsSubSequenceOf(sequence))
                     _frequentSequences[candidate]++;  
             }
 
-            pruned = true;
         }
 
         LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
