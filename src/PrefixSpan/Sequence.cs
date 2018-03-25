@@ -126,7 +126,6 @@ public class Sequence : IComparable<Sequence>
 
     public bool IsSubSequenceOf(Sequence supersequence) 
     {
-
         if (this.IsEmpty)
             return false;
 
@@ -166,7 +165,7 @@ public class Sequence : IComparable<Sequence>
         return false;
     }
     
-    public bool IsPrefixOf(ConcurrentDictionary<Item, int> fDict, Sequence seq, PseudoSequence pSeq, out PseudoSequence suffix) 
+    public bool IsPrefixOf(Dictionary<Item, int> fDict, Sequence seq, PseudoSequence pSeq, out PseudoSequence suffix) 
     {
         suffix = new PseudoSequence();
 
@@ -267,7 +266,7 @@ public class Sequence : IComparable<Sequence>
 
     // removes items that are not in fList (frequent items list)
     // and sorts remaining items according to their order in fList
-    public void SortAndPrune(ConcurrentDictionary<Item, int> fDict) 
+    public void SortAndPrune(Dictionary<Item, int> fDict) 
     {
         for (int i = NumTransactions - 1; i >= 0; i--)
         {
@@ -277,7 +276,7 @@ public class Sequence : IComparable<Sequence>
         }
     }
 
-    public void JustPrune(ConcurrentDictionary<Item, int> fDict) 
+    public void JustPrune(Dictionary<Item, int> fDict) 
     {
         for (int i = NumTransactions - 1; i >= 0; i--)
         {

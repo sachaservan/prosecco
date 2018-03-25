@@ -121,7 +121,7 @@ public class Transaction : IComparable<Transaction>
 
     // removes items that are not in fList (frequent items list)
     // and sorts remaining items according to their order in fList
-    public void SortAndPrune(ConcurrentDictionary<Item, int> fDict) 
+    public void SortAndPrune(Dictionary<Item, int> fDict) 
     {
         for (int index = NumItems - 1; index >= 0; index--)
         {
@@ -138,7 +138,7 @@ public class Transaction : IComparable<Transaction>
         _items.TrimExcess();
     }
 
-    public void JustPrune(ConcurrentDictionary<Item, int> fDict) 
+    public void JustPrune(Dictionary<Item, int> fDict) 
     {
         for (int index = NumItems - 1; index >= 0; index--)
         {

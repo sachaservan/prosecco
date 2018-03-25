@@ -11,7 +11,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -21,7 +20,7 @@ public class PrefixSpan {
     protected List<Sequence> _sequences;
 
     // mapping of items to their frequency (support)
-    protected ConcurrentDictionary<Item, int> _fDict;
+    protected Dictionary<Item, int> _fDict;
 
     // mapping of items to sequences
     protected Dictionary<Item, List<PseudoSequence>> _projections;
@@ -98,10 +97,9 @@ public class PrefixSpan {
         // contains all items in DB mapped to a pseudo projection for the item
         // or (single item sequence)
         _projections = new Dictionary<Item, List<PseudoSequence>>(Item.EqComp);
-
+        
         // extract the individual frequent items from the list of sequences
         _fDict = getGloballyFrequentItems(_sequences, _minCount);
-
 
         if (!sorted) {
             // sort sequence alphabetically while pruning
@@ -226,7 +224,7 @@ public class PrefixSpan {
         }
     }
 
-    protected ConcurrentDictionary<Item, int> getGloballyFrequentItems(List<Sequence> sequences, int minCount) 
+    protected Dictionary<Item, int> getGloballyFrequentItems(List<Sequence> sequences, int minCount) 
     {
         // item support map can be updated on the fly by the progressive algorithm
         // in which case there is no need to recompute it
@@ -239,31 +237,32 @@ public class PrefixSpan {
             _sequences.ForEach(updateSupportMapWithSequence);
         }
         
-        ConcurrentDictionary<Item, int> fDict = new ConcurrentDictionary<Item, int>(Item.EqComp);
-        var fList = new List<Item>(_itemSupportMap.Keys);
+        Dictionary<Item, int> fDict = new Dictionary<Item, int>(Item.EqComp);
+        var fList = new List<Item>(_itemSupportMap.Keys.Count);
 
         // 1. prune based on item support
-        for (var i = fList.Count - 1; i >= 0; i--) 
+        foreach(Item item in _itemSupportMap.Keys) 
         {
-            var item = fList[i];
-            if (_itemSupportMap[item] < minCount)
-            {
-                _itemSupportMap.Remove(item); 
-                fList.RemoveAt(i);
+            var frequency = _itemSupportMap[item];
+            if (frequency >= minCount) {
+                item.Frequency = frequency;
+                fList.Add(item);
             }
-            else 
-                item.Frequency = _itemSupportMap[item];
         }
 
         // 2. sort based on support
         fList.Sort((a, b) => a.CompareTo(b));
 
         // 3. create a dictionary with sort index of item
+        _itemSupportMap = new Dictionary<Item, int>(Item.EqComp);
         int index = 0;
         foreach(Item item in fList) 
         {
+            // create pruned support map
+            _itemSupportMap[item] = item.Frequency;
+
             // update sort index
-            fDict.AddOrUpdate(item, index, (k, v) => v);
+            fDict[item] = index;
             index++;
         }
         

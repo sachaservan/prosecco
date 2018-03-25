@@ -25,7 +25,7 @@ public class ProSecCo : PrefixSpan
     // list of frequent patterns 
     protected Dictionary<Sequence, int> _frequentSequences;
     protected HashSet<Sequence> _misses;
-    protected ConcurrentDictionary<Item, int> _fDictLastBlock;
+    protected Dictionary<Item, int> _fDictLastBlock;
     protected double _errorTolerance;
     protected int _dbSize;
     protected int _blockSize;
@@ -140,13 +140,12 @@ public class ProSecCo : PrefixSpan
                 if (candidate.IsSubSequenceOf(sequence))
                     _frequentSequences[candidate]++;  
             }
-
         }
 
         LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
         runtimeTimer.Restart();
 
-         _fDictLastBlock = _fDict;
+        _fDictLastBlock = _fDict;
 
         // if using the accumulate algorithm, prune based on global error, otherwise, prune based on batch error
         List<Sequence> sequences = extractAndPruneFrequentSequences(minCountGlobal, firstBatch);
