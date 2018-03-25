@@ -78,23 +78,23 @@ public class ProSecCo : PrefixSpan
     public void SetNextSequenceBatch(List<Sequence> batch)  
     {
         _itemSupportMap = new Dictionary<Item, int>(Item.EqComp);
-        _sequences = new List<Sequence>(batch.Count);
-        _sequenceInBlock = new List<Sequence>(batch.Count);
         _currentBatchSize = batch.Count;
+        _sequenceInBlock = new List<Sequence>(batch.Count);
 
-        for (int i = 0; i < batch.Count; i++)
+        _sequences = new List<Sequence>(batch);
+
+        for (int i = 0; i < batch.Count; i ++)
         {
             // update metadata on data (before pruning)
             var sequence = batch[i];
+            sequence.JustPrune(_fDictInitialBlock);
             _metadata.UpdateWithSequence(sequence);
-            _sequences.Add(sequence);
-
-            var sequenceCopy = new Sequence(sequence);
-            sequenceCopy.JustPrune(_fDictInitialBlock);
-            _sequenceInBlock.Add(sequenceCopy);
-
             updateSupportMapWithSequence(sequence);
         }
+
+        Sequence[] dest = new Sequence[batch.Count];
+        _sequences.CopyTo(dest);
+        _sequenceInBlock = new List<Sequence>(dest);
     }
     
     public Tuple<List<Sequence>, double> FrequentSequences(double minSupport) 
@@ -139,13 +139,23 @@ public class ProSecCo : PrefixSpan
 
         // find the exact support of sequences which did not appear frequent
         // in the current batch
+        var pruned = false;
+
         foreach(var candidate in _misses) 
         {               
             foreach(var sequence in _sequenceInBlock)
             {
+                // avoid matching over all the items, just the 
+                // ones which are sure to appear
+                if (!pruned) {
+                    sequence.JustPrune(_fDictInitialBlock);
+                }
+
                 if (candidate.IsSubSequenceOf(sequence))
                     _frequentSequences[candidate]++;  
             }
+
+            pruned = true;
         }
 
         LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
