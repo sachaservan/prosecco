@@ -198,6 +198,44 @@ public class PrefixSpan {
         }
     }
 
+    protected void updateSupportMapWithSequenceAndPrune(Sequence sequence, Dictionary<Item, int> fDict) {
+        // keeps record of encountered items in the sequence
+        // to avoid double counting the support
+        HashSet<Item> seen = new HashSet<Item>(Item.EqComp);
+        
+        // calculate frequency of individual items
+        foreach(var transaction in sequence.Transactions) 
+        {
+            for (var i = transaction.NumItems - 1; i >= 0; i--)
+            {
+                var item = transaction[i];
+                if (!fDict.ContainsKey(item))
+                {
+                    transaction.Items.RemoveAt(i);
+                    continue;
+                }
+
+                item.SortIndex = fDict[item];
+
+                // skip
+                if (seen.Contains(item))
+                    continue;
+                
+                // only calculate count once per sequence
+                seen.Add(item);
+
+                int frequency = 0;
+                if (_itemSupportMap.TryGetValue(item, out frequency)) 
+                    _itemSupportMap[item] = frequency + 1;
+                else 
+                    _itemSupportMap.Add(item, 1);
+            }
+
+            transaction.Items.TrimExcess();
+            transaction.Items.Sort((a, b) => a.SortIndex.CompareTo(b.SortIndex));
+        }
+    }
+
     protected void updateSupportMapWithSequence(Sequence sequence) {
         // keeps record of encountered items in the sequence
         // to avoid double counting the support
@@ -206,7 +244,7 @@ public class PrefixSpan {
         // calculate frequency of individual items
         foreach(var transaction in sequence.Transactions) 
         {
-            foreach(var item in transaction.Items)
+            foreach(var item in transaction.Items) 
             {
                 // skip
                 if (seen.Contains(item))
@@ -221,6 +259,7 @@ public class PrefixSpan {
                 else 
                     _itemSupportMap.Add(item, 1);
             }
+
         }
     }
 
