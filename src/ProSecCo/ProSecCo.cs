@@ -86,7 +86,8 @@ public class ProSecCo : PrefixSpan
             // update metadata on data (before pruning)
             var sequence = batch[i];
             _metadata.UpdateWithSequence(sequence);
-            updateSupportMapWithSequenceAndPrune(sequence, _fDictLastBlock);
+            sequence.SortAndPrune(_fDictLastBlock);
+            updateSupportMapWithSequence(sequence);
         }
     }
     
