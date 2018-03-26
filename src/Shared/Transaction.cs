@@ -131,11 +131,12 @@ public class Transaction : IComparable<Transaction>
                 continue;
             }
 
-            _items[index].SortIndex = fDict[_items[index]];
+            var item = _items[index];
+            item.SortIndex = fDict[item];
         }
 
-        _items.Sort((a, b) => a.SortIndex.CompareTo(b.SortIndex));
         _items.TrimExcess();
+        _items.Sort((a, b) => a.SortIndex.CompareTo(b.SortIndex));
     }
 
     public void JustPrune(Dictionary<Item, int> fDict) 
