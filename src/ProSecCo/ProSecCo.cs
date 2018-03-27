@@ -26,6 +26,8 @@ public class ProSecCo : PrefixSpan
     protected Dictionary<Sequence, int> _frequentSequences;
     protected HashSet<Sequence> _misses;
     protected Dictionary<Item, int> _fDictLastBlock;
+    protected List<Sequence> _sequencesCopy;
+
     protected double _errorTolerance;
     protected int _dbSize;
     protected int _blockSize;
@@ -89,6 +91,11 @@ public class ProSecCo : PrefixSpan
             sequence.SortAndPrune(_fDictLastBlock);
             updateSupportMapWithSequence(sequence);
         }
+
+        Sequence [] seqCpy = new Sequence[_sequences.Count];
+        _sequences.CopyTo(seqCpy);
+
+        _sequencesCopy = new List<Sequence>(seqCpy);
     }
     
     public Tuple<List<Sequence>, double> FrequentSequences(double minSupport) 
@@ -135,7 +142,7 @@ public class ProSecCo : PrefixSpan
         // in the current batch
         foreach(var candidate in _misses) 
         {               
-            foreach(var sequence in _sequences)
+            foreach(var sequence in _sequencesCopy)
             {
                 if (candidate.IsSubSequenceOf(sequence))
                     _frequentSequences[candidate]++;  
@@ -145,7 +152,8 @@ public class ProSecCo : PrefixSpan
         LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
         runtimeTimer.Restart();
 
-        _fDictLastBlock = _fDict;
+        if (firstBatch)
+            _fDictLastBlock = _fDict;
 
         // if using the accumulate algorithm, prune based on global error, otherwise, prune based on batch error
         List<Sequence> sequences = extractAndPruneFrequentSequences(minCountGlobal, firstBatch);

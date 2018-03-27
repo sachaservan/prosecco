@@ -39,7 +39,7 @@ public class PrefixSpan {
 
     protected void reset()
     {
-        //_fDict = null;
+        _fDict = null;
         _nextPseudoSequenceIndex = 0;
         _sequences = new List<Sequence>();
         _projections = new Dictionary<Item, List<PseudoSequence>>(Item.EqComp);    

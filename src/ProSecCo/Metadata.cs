@@ -13,6 +13,8 @@ public class Metadata {
 
     private bool _topK;
 
+    private double _prevError;
+
 
     // current number of iterations (batches)
     // processed
@@ -98,15 +100,15 @@ public class Metadata {
             return 0.0;
         }
 
-        var epsilon = Math.Sqrt(
+        double epsilon = Math.Sqrt(
 
             (_dIndex - Math.Log(_errorTolerance) + Math.Log(_numBlocks)) / (double)(2*_numSequencesProcessed)
         );
 
+
         if (double.IsInfinity(epsilon))
             return 0.0;
-
-            
+        
         return _topK ? 2*epsilon : epsilon;
     }
 }
