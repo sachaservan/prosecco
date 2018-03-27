@@ -72,7 +72,7 @@ for ds in prefixspan:
     b = np.array(r_pr).std() / math.sqrt(len(r_pr))
     prosecco_std.append(1.96 * b)
 
-print()
+print(datasets)
 print(len(prosecco_std), len(prefixspan_std))
 print()
 

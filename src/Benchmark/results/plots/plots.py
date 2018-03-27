@@ -354,6 +354,12 @@ if __name__== '__main__':
     runtimes = {'prefixspan': {}, 'prosecco': {}}
 
     print('Dataset', 'PS-Mean', 'PS-STD', 'IPS-Mean', 'IPS-STD')
+
+
+    (s, p) = main(runtimes, 'seq-accidents-lg-0.80', 'accidents-5-0_80', 'ACCIDENTS-0.80', show)
+    (s, p) = main(runtimes, 'seq-accidents-lg-0.85', 'accidents-5-0_85', 'ACCIDENTS-0.85', show)
+    (s, p) = main(runtimes, 'seq-accidents-lg-0.90', 'accidents-5-0_90', 'ACCIDENTS-0.90', show)
+
     (s, p) = main(runtimes, 'seq-bms-lg-0.03', 'bms-100-0_03', 'BMS-0.03', show)
     (s, p) = main(runtimes, 'seq-bms-lg-0.04', 'bms-100-0_04', 'BMS-0.04', show)
     (s, p) = main(runtimes, 'seq-bms-lg-0.05', 'bms-100-0_05', 'BMS-0.05', show)
@@ -373,6 +379,7 @@ if __name__== '__main__':
     (s, p) = main(runtimes, 'seq-fifa-lg-0.3', 'fifa-50-0_30', 'FIFA-0.30', show)
     (s, p) = main(runtimes, 'seq-fifa-lg-0.35', 'fifa-50-0_35', 'FIFA-0.35', show)
     (s, p) = main(runtimes, 'seq-fifa-lg-0.4', 'fifa-50-0_40', 'FIFA-0.40', show)
+
     
     with open('runtimes.pickle', 'wb') as handle:
         pickle.dump(runtimes, handle, protocol=pickle.HIGHEST_PROTOCOL)

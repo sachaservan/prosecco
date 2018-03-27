@@ -217,6 +217,9 @@ namespace server {
                         {
                             run.Errors.Add(response.Error);
                             run.TotalRuntimeInMillis = response.TotalRuntimeInMillis;
+                            run.LastBlockFileReadingAndParsingTime = response.LastBlockFileReadingAndParsingTime;
+                            run.LastBlockPrefixSpanRuntime = response.LastBlockPrefixSpanRuntime;
+                            run.LastBlockSubsequenceMatchingRuntime = response.LastBlockSubsequenceMatchingRuntime;
                         }
                     }
                 }
@@ -409,6 +412,9 @@ namespace server {
     {
         public int RunId {get; set;}
         public long TotalRuntimeInMillis {get; set;}
+        public long LastBlockFileReadingAndParsingTime {get; set;}
+        public long LastBlockPrefixSpanRuntime {get; set;}
+        public long LastBlockSubsequenceMatchingRuntime {get; set;}
         public List<long> RuntimePerBatch {get; set;}  = new List<long>();
         public List<double> Errors{get; set;} = new List<double>();
         public List<List<double>> NormalizedErrorsPerBatch{get; set;} = new List<List<double>>();
