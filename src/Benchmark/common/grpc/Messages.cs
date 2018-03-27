@@ -28,28 +28,29 @@ namespace Benchmark {
             "ZRgDIAEoARIMCgRGaWxlGAQgASgJEg8KB1N1cHBvcnQYBSABKAESEgoKU2Ft",
             "cGxlU2l6ZRgGIAEoBRIJCgFLGAcgASgFEg8KB1VzZVRvcEsYCCABKAgSDgoG",
             "REJTaXplGAkgASgFEhYKDlNodXRkb3duU2VydmVyGAogASgIIioKC01lbW9y",
-            "eVJlcGx5EhsKE01lbW9yeVVzZ2FnZUluQnl0ZXMYASABKAMi2gIKDkJlbmNo",
+            "eVJlcGx5EhsKE01lbW9yeVVzZ2FnZUluQnl0ZXMYASABKAMi9wIKDkJlbmNo",
             "bWFya1JlcGx5Eg8KB21lc3NhZ2UYASABKAkSFwoPU2VxdWVuY2VzSW5Kc29u",
             "GAMgASgJEhEKCUl0ZXJhdGlvbhgEIAEoBRIaChJOclByb2Nlc3NlZFJlY29y",
             "ZHMYBSABKAUSDQoFRXJyb3IYBiABKAESHAoUQmF0Y2hSdW50aW1lSW5NaWxs",
-            "aXMYByABKAMSHAoUVG90YWxSdW50aW1lSW5NaWxsaXMYCCABKAMSKgoiTGFz",
-            "dEJsb2NrRmlsZVJlYWRpbmdBbmRQYXJzaW5nVGltZRgJIAEoAxIiChpMYXN0",
-            "QmxvY2tQcmVmaXhTcGFuUnVudGltZRgKIAEoAxIrCiNMYXN0QmxvY2tTdWJz",
-            "ZXF1ZW5jZU1hdGNoaW5nUnVudGltZRgLIAEoAxInCglSZXBseVR5cGUYDCAB",
-            "KA4yFC5iZW5jaG1hcmsuUmVwbHlUeXBlKjgKCUFsZ29yaXRobRIMCghQcm9T",
-            "ZWNDbxAAEg4KClByZWZpeFNwYW4QARINCglVbmRlZmluZWQQAiokCglSZXBs",
-            "eVR5cGUSDAoIQ29tcGxldGUQABIJCgVCYXRjaBABMqABCgtCZW5jaG1hcmtl",
-            "chJKCgxydW5CZW5jaG1hcmsSGy5iZW5jaG1hcmsuQmVuY2htYXJrUmVxdWVz",
-            "dBoZLmJlbmNobWFyay5CZW5jaG1hcmtSZXBseSIAMAESRQoNbW9uaXRvck1l",
-            "bW9yeRIYLmJlbmNobWFyay5NZW1vcnlSZXF1ZXN0GhYuYmVuY2htYXJrLk1l",
-            "bW9yeVJlcGx5IgAwAWIGcHJvdG8z"));
+            "aXMYByABKAMSHAoUVG90YWxSdW50aW1lSW5NaWxsaXMYCCABKAMSIAoYUHJl",
+            "dkJsb2NrRmlsZVJlYWRpbmdUaW1lGAkgASgDEiUKHVByZXZCbG9ja1ByZVBy",
+            "b2Nlc3NpbmdSdW50aW1lGAogASgDEiIKGlByZXZCbG9ja1ByZWZpeFNwYW5S",
+            "dW50aW1lGAsgASgDEisKI1ByZXZCbG9ja1N1YnNlcXVlbmNlTWF0Y2hpbmdS",
+            "dW50aW1lGAwgASgDEicKCVJlcGx5VHlwZRgNIAEoDjIULmJlbmNobWFyay5S",
+            "ZXBseVR5cGUqOAoJQWxnb3JpdGhtEgwKCFByb1NlY0NvEAASDgoKUHJlZml4",
+            "U3BhbhABEg0KCVVuZGVmaW5lZBACKiQKCVJlcGx5VHlwZRIMCghDb21wbGV0",
+            "ZRAAEgkKBUJhdGNoEAEyoAEKC0JlbmNobWFya2VyEkoKDHJ1bkJlbmNobWFy",
+            "axIbLmJlbmNobWFyay5CZW5jaG1hcmtSZXF1ZXN0GhkuYmVuY2htYXJrLkJl",
+            "bmNobWFya1JlcGx5IgAwARJFCg1tb25pdG9yTWVtb3J5EhguYmVuY2htYXJr",
+            "Lk1lbW9yeVJlcXVlc3QaFi5iZW5jaG1hcmsuTWVtb3J5UmVwbHkiADABYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Benchmark.Algorithm), typeof(global::Benchmark.ReplyType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.MemoryRequest), global::Benchmark.MemoryRequest.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.BenchmarkRequest), global::Benchmark.BenchmarkRequest.Parser, new[]{ "Id", "Algorithm", "ErrorTolerance", "File", "Support", "SampleSize", "K", "UseTopK", "DBSize", "ShutdownServer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.MemoryReply), global::Benchmark.MemoryReply.Parser, new[]{ "MemoryUsgageInBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.BenchmarkReply), global::Benchmark.BenchmarkReply.Parser, new[]{ "Message", "SequencesInJson", "Iteration", "NrProcessedRecords", "Error", "BatchRuntimeInMillis", "TotalRuntimeInMillis", "LastBlockFileReadingAndParsingTime", "LastBlockPrefixSpanRuntime", "LastBlockSubsequenceMatchingRuntime", "ReplyType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.BenchmarkReply), global::Benchmark.BenchmarkReply.Parser, new[]{ "Message", "SequencesInJson", "Iteration", "NrProcessedRecords", "Error", "BatchRuntimeInMillis", "TotalRuntimeInMillis", "PrevBlockFileReadingTime", "PrevBlockPreProcessingRuntime", "PrevBlockPrefixSpanRuntime", "PrevBlockSubsequenceMatchingRuntime", "ReplyType" }, null, null, null)
           }));
     }
     #endregion
@@ -676,9 +677,10 @@ namespace Benchmark {
       error_ = other.error_;
       batchRuntimeInMillis_ = other.batchRuntimeInMillis_;
       totalRuntimeInMillis_ = other.totalRuntimeInMillis_;
-      lastBlockFileReadingAndParsingTime_ = other.lastBlockFileReadingAndParsingTime_;
-      lastBlockPrefixSpanRuntime_ = other.lastBlockPrefixSpanRuntime_;
-      lastBlockSubsequenceMatchingRuntime_ = other.lastBlockSubsequenceMatchingRuntime_;
+      prevBlockFileReadingTime_ = other.prevBlockFileReadingTime_;
+      prevBlockPreProcessingRuntime_ = other.prevBlockPreProcessingRuntime_;
+      prevBlockPrefixSpanRuntime_ = other.prevBlockPrefixSpanRuntime_;
+      prevBlockSubsequenceMatchingRuntime_ = other.prevBlockSubsequenceMatchingRuntime_;
       replyType_ = other.replyType_;
     }
 
@@ -764,41 +766,52 @@ namespace Benchmark {
       }
     }
 
-    /// <summary>Field number for the "LastBlockFileReadingAndParsingTime" field.</summary>
-    public const int LastBlockFileReadingAndParsingTimeFieldNumber = 9;
-    private long lastBlockFileReadingAndParsingTime_;
+    /// <summary>Field number for the "PrevBlockFileReadingTime" field.</summary>
+    public const int PrevBlockFileReadingTimeFieldNumber = 9;
+    private long prevBlockFileReadingTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long LastBlockFileReadingAndParsingTime {
-      get { return lastBlockFileReadingAndParsingTime_; }
+    public long PrevBlockFileReadingTime {
+      get { return prevBlockFileReadingTime_; }
       set {
-        lastBlockFileReadingAndParsingTime_ = value;
+        prevBlockFileReadingTime_ = value;
       }
     }
 
-    /// <summary>Field number for the "LastBlockPrefixSpanRuntime" field.</summary>
-    public const int LastBlockPrefixSpanRuntimeFieldNumber = 10;
-    private long lastBlockPrefixSpanRuntime_;
+    /// <summary>Field number for the "PrevBlockPreProcessingRuntime" field.</summary>
+    public const int PrevBlockPreProcessingRuntimeFieldNumber = 10;
+    private long prevBlockPreProcessingRuntime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long LastBlockPrefixSpanRuntime {
-      get { return lastBlockPrefixSpanRuntime_; }
+    public long PrevBlockPreProcessingRuntime {
+      get { return prevBlockPreProcessingRuntime_; }
       set {
-        lastBlockPrefixSpanRuntime_ = value;
+        prevBlockPreProcessingRuntime_ = value;
       }
     }
 
-    /// <summary>Field number for the "LastBlockSubsequenceMatchingRuntime" field.</summary>
-    public const int LastBlockSubsequenceMatchingRuntimeFieldNumber = 11;
-    private long lastBlockSubsequenceMatchingRuntime_;
+    /// <summary>Field number for the "PrevBlockPrefixSpanRuntime" field.</summary>
+    public const int PrevBlockPrefixSpanRuntimeFieldNumber = 11;
+    private long prevBlockPrefixSpanRuntime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long LastBlockSubsequenceMatchingRuntime {
-      get { return lastBlockSubsequenceMatchingRuntime_; }
+    public long PrevBlockPrefixSpanRuntime {
+      get { return prevBlockPrefixSpanRuntime_; }
       set {
-        lastBlockSubsequenceMatchingRuntime_ = value;
+        prevBlockPrefixSpanRuntime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PrevBlockSubsequenceMatchingRuntime" field.</summary>
+    public const int PrevBlockSubsequenceMatchingRuntimeFieldNumber = 12;
+    private long prevBlockSubsequenceMatchingRuntime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long PrevBlockSubsequenceMatchingRuntime {
+      get { return prevBlockSubsequenceMatchingRuntime_; }
+      set {
+        prevBlockSubsequenceMatchingRuntime_ = value;
       }
     }
 
     /// <summary>Field number for the "ReplyType" field.</summary>
-    public const int ReplyTypeFieldNumber = 12;
+    public const int ReplyTypeFieldNumber = 13;
     private global::Benchmark.ReplyType replyType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Benchmark.ReplyType ReplyType {
@@ -828,9 +841,10 @@ namespace Benchmark {
       if (Error != other.Error) return false;
       if (BatchRuntimeInMillis != other.BatchRuntimeInMillis) return false;
       if (TotalRuntimeInMillis != other.TotalRuntimeInMillis) return false;
-      if (LastBlockFileReadingAndParsingTime != other.LastBlockFileReadingAndParsingTime) return false;
-      if (LastBlockPrefixSpanRuntime != other.LastBlockPrefixSpanRuntime) return false;
-      if (LastBlockSubsequenceMatchingRuntime != other.LastBlockSubsequenceMatchingRuntime) return false;
+      if (PrevBlockFileReadingTime != other.PrevBlockFileReadingTime) return false;
+      if (PrevBlockPreProcessingRuntime != other.PrevBlockPreProcessingRuntime) return false;
+      if (PrevBlockPrefixSpanRuntime != other.PrevBlockPrefixSpanRuntime) return false;
+      if (PrevBlockSubsequenceMatchingRuntime != other.PrevBlockSubsequenceMatchingRuntime) return false;
       if (ReplyType != other.ReplyType) return false;
       return true;
     }
@@ -845,9 +859,10 @@ namespace Benchmark {
       if (Error != 0D) hash ^= Error.GetHashCode();
       if (BatchRuntimeInMillis != 0L) hash ^= BatchRuntimeInMillis.GetHashCode();
       if (TotalRuntimeInMillis != 0L) hash ^= TotalRuntimeInMillis.GetHashCode();
-      if (LastBlockFileReadingAndParsingTime != 0L) hash ^= LastBlockFileReadingAndParsingTime.GetHashCode();
-      if (LastBlockPrefixSpanRuntime != 0L) hash ^= LastBlockPrefixSpanRuntime.GetHashCode();
-      if (LastBlockSubsequenceMatchingRuntime != 0L) hash ^= LastBlockSubsequenceMatchingRuntime.GetHashCode();
+      if (PrevBlockFileReadingTime != 0L) hash ^= PrevBlockFileReadingTime.GetHashCode();
+      if (PrevBlockPreProcessingRuntime != 0L) hash ^= PrevBlockPreProcessingRuntime.GetHashCode();
+      if (PrevBlockPrefixSpanRuntime != 0L) hash ^= PrevBlockPrefixSpanRuntime.GetHashCode();
+      if (PrevBlockSubsequenceMatchingRuntime != 0L) hash ^= PrevBlockSubsequenceMatchingRuntime.GetHashCode();
       if (ReplyType != 0) hash ^= ReplyType.GetHashCode();
       return hash;
     }
@@ -887,20 +902,24 @@ namespace Benchmark {
         output.WriteRawTag(64);
         output.WriteInt64(TotalRuntimeInMillis);
       }
-      if (LastBlockFileReadingAndParsingTime != 0L) {
+      if (PrevBlockFileReadingTime != 0L) {
         output.WriteRawTag(72);
-        output.WriteInt64(LastBlockFileReadingAndParsingTime);
+        output.WriteInt64(PrevBlockFileReadingTime);
       }
-      if (LastBlockPrefixSpanRuntime != 0L) {
+      if (PrevBlockPreProcessingRuntime != 0L) {
         output.WriteRawTag(80);
-        output.WriteInt64(LastBlockPrefixSpanRuntime);
+        output.WriteInt64(PrevBlockPreProcessingRuntime);
       }
-      if (LastBlockSubsequenceMatchingRuntime != 0L) {
+      if (PrevBlockPrefixSpanRuntime != 0L) {
         output.WriteRawTag(88);
-        output.WriteInt64(LastBlockSubsequenceMatchingRuntime);
+        output.WriteInt64(PrevBlockPrefixSpanRuntime);
+      }
+      if (PrevBlockSubsequenceMatchingRuntime != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(PrevBlockSubsequenceMatchingRuntime);
       }
       if (ReplyType != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteEnum((int) ReplyType);
       }
     }
@@ -929,14 +948,17 @@ namespace Benchmark {
       if (TotalRuntimeInMillis != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalRuntimeInMillis);
       }
-      if (LastBlockFileReadingAndParsingTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastBlockFileReadingAndParsingTime);
+      if (PrevBlockFileReadingTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PrevBlockFileReadingTime);
       }
-      if (LastBlockPrefixSpanRuntime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastBlockPrefixSpanRuntime);
+      if (PrevBlockPreProcessingRuntime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PrevBlockPreProcessingRuntime);
       }
-      if (LastBlockSubsequenceMatchingRuntime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastBlockSubsequenceMatchingRuntime);
+      if (PrevBlockPrefixSpanRuntime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PrevBlockPrefixSpanRuntime);
+      }
+      if (PrevBlockSubsequenceMatchingRuntime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PrevBlockSubsequenceMatchingRuntime);
       }
       if (ReplyType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplyType);
@@ -970,14 +992,17 @@ namespace Benchmark {
       if (other.TotalRuntimeInMillis != 0L) {
         TotalRuntimeInMillis = other.TotalRuntimeInMillis;
       }
-      if (other.LastBlockFileReadingAndParsingTime != 0L) {
-        LastBlockFileReadingAndParsingTime = other.LastBlockFileReadingAndParsingTime;
+      if (other.PrevBlockFileReadingTime != 0L) {
+        PrevBlockFileReadingTime = other.PrevBlockFileReadingTime;
       }
-      if (other.LastBlockPrefixSpanRuntime != 0L) {
-        LastBlockPrefixSpanRuntime = other.LastBlockPrefixSpanRuntime;
+      if (other.PrevBlockPreProcessingRuntime != 0L) {
+        PrevBlockPreProcessingRuntime = other.PrevBlockPreProcessingRuntime;
       }
-      if (other.LastBlockSubsequenceMatchingRuntime != 0L) {
-        LastBlockSubsequenceMatchingRuntime = other.LastBlockSubsequenceMatchingRuntime;
+      if (other.PrevBlockPrefixSpanRuntime != 0L) {
+        PrevBlockPrefixSpanRuntime = other.PrevBlockPrefixSpanRuntime;
+      }
+      if (other.PrevBlockSubsequenceMatchingRuntime != 0L) {
+        PrevBlockSubsequenceMatchingRuntime = other.PrevBlockSubsequenceMatchingRuntime;
       }
       if (other.ReplyType != 0) {
         ReplyType = other.ReplyType;
@@ -1021,18 +1046,22 @@ namespace Benchmark {
             break;
           }
           case 72: {
-            LastBlockFileReadingAndParsingTime = input.ReadInt64();
+            PrevBlockFileReadingTime = input.ReadInt64();
             break;
           }
           case 80: {
-            LastBlockPrefixSpanRuntime = input.ReadInt64();
+            PrevBlockPreProcessingRuntime = input.ReadInt64();
             break;
           }
           case 88: {
-            LastBlockSubsequenceMatchingRuntime = input.ReadInt64();
+            PrevBlockPrefixSpanRuntime = input.ReadInt64();
             break;
           }
           case 96: {
+            PrevBlockSubsequenceMatchingRuntime = input.ReadInt64();
+            break;
+          }
+          case 104: {
             replyType_ = (global::Benchmark.ReplyType) input.ReadEnum();
             break;
           }

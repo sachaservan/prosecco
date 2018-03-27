@@ -1,4 +1,4 @@
-// C:\Users\ez\.nuget\packages\grpc.tools\1.2.2\tools\windows_x64\protoc.exe -IBenchmark/common --csharp_out Benchmark/common/grpc --grpc_out Benchmark/common/grpc Benchmark/common/messages.proto --plugin=protoc-gen-grpc=C:\Users\ez\.nuget\packages\grpc.tools\1.2.2\tools\windows_x64\grpc_csharp_plugin.exe
+// C:\Users\emanu\.nuget\packages\grpc.tools\1.2.2\tools\windows_x64\protoc.exe -IBenchmark/common --csharp_out Benchmark/common/grpc --grpc_out Benchmark/common/grpc Benchmark/common/messages.proto --plugin=protoc-gen-grpc=C:\Users\emanu\.nuget\packages\grpc.tools\1.2.2\tools\windows_x64\grpc_csharp_plugin.exe
 
 syntax = "proto3";
 
@@ -49,9 +49,10 @@ message BenchmarkReply {
     double Error = 6;
     int64 BatchRuntimeInMillis = 7;
     int64 TotalRuntimeInMillis = 8;
-    int64 LastBlockFileReadingAndParsingTime = 9;
-    int64 LastBlockPrefixSpanRuntime = 10;
-    int64 LastBlockSubsequenceMatchingRuntime = 11;
-    ReplyType ReplyType = 12;
+    int64 PrevBlockFileReadingTime = 9;
+    int64 PrevBlockPreProcessingRuntime = 10;
+    int64 PrevBlockPrefixSpanRuntime  = 11;
+    int64 PrevBlockSubsequenceMatchingRuntime  = 12;
+    ReplyType ReplyType = 13;
 }
 

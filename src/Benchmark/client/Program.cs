@@ -196,9 +196,10 @@ namespace server {
                             run.RuntimePerBatch.Add(response.BatchRuntimeInMillis);
                             run.Errors.Add(response.Error);
                             
-                            run.LastBlockFileReadingAndParsingTimePerBatch.Add(response.LastBlockFileReadingAndParsingTime);
-                            run.LastBlockPrefixSpanRuntimePerBatch.Add(response.LastBlockPrefixSpanRuntime);
-                            run.LastBlockSubsequenceMatchingRuntimePerBatch.Add(response.LastBlockSubsequenceMatchingRuntime);
+                            run.PrevBlockFileReadingTime.Add(response.PrevBlockFileReadingTime);
+                            run.PrevBlockPreProcessingRuntime.Add(response.PrevBlockPreProcessingRuntime);
+                            run.PrevBlockPrefixSpanRuntime.Add(response.PrevBlockPrefixSpanRuntime);
+                            run.PrevBlockSubsequenceMatchingRuntime.Add(response.PrevBlockSubsequenceMatchingRuntime);
 
                             evaluate(run, response.Iteration, expectedResults, sequences, response.NrProcessedRecords);
 
@@ -414,9 +415,10 @@ namespace server {
     {
         public int RunId {get; set;}
         public long TotalRuntimeInMillis {get; set;}
-        public List<long> LastBlockFileReadingAndParsingTimePerBatch {get; set;} = new List<long>();
-        public List<long> LastBlockPrefixSpanRuntimePerBatch {get; set;} = new List<long>();
-        public List<long> LastBlockSubsequenceMatchingRuntimePerBatch {get; set;} = new List<long>();
+        public List<long> PrevBlockFileReadingTime {get; set;} = new List<long>();
+        public List<long> PrevBlockPreProcessingRuntime {get; set;} = new List<long>();
+        public List<long> PrevBlockPrefixSpanRuntime {get; set;} = new List<long>();
+        public List<long> PrevBlockSubsequenceMatchingRuntime {get; set;} = new List<long>();
         public List<long> RuntimePerBatch {get; set;} = new List<long>();
         public List<double> Errors{get; set;} = new List<double>();
         public List<List<double>> NormalizedErrorsPerBatch{get; set;} = new List<List<double>>();
