@@ -49,6 +49,9 @@ message BenchmarkReply {
     double Error = 6;
     int64 BatchRuntimeInMillis = 7;
     int64 TotalRuntimeInMillis = 8;
-    ReplyType ReplyType = 9;
+    int64 LastBlockFileReadingAndParsingTime = 9;
+    int64 LastBlockPrefixSpanRuntime = 10;
+    int64 LastBlockSubsequenceMatchingRuntime = 11;
+    ReplyType ReplyType = 12;
 }
 

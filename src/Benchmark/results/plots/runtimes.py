@@ -56,21 +56,20 @@ prefixspan_means = []
 prefixspan_std = []
 
 datasets = ['BMS-0.03', 'KORSARAK-0.05', 'SIGN-0.40', 'BIBLE-0.40', 'FIFA-0.30']
+datasets = ['BMS-0.03', 'BMS-0.04', 'BMS-0.05', 'KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15', 'SIGN-0.40', 'SIGN-0.50', 'SIGN-0.60', 'BIBLE-0.40', 'BIBLE-0.50', 'BIBLE-0.60', 'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 'ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90']
 prefixspan = runtimes['prefixspan']
 prosseco = runtimes['prosecco']
-for ds in prefixspan:
-    if ds in datasets:
+for ds in datasets:
+    r_ps = prefixspan[ds]
+    
+    prefixspan_means.append(np.array(r_ps).mean())
+    b = np.array(r_ps).std() / math.sqrt(len(r_ps))
+    prefixspan_std.append(1.96 * b)
 
-        r_ps = prefixspan[ds]
-        
-        prefixspan_means.append(np.array(r_ps).mean())
-        b = np.array(r_ps).std() / math.sqrt(len(r_ps))
-        prefixspan_std.append(1.96 * b)
-
-        r_pr = prosseco[ds]
-        prosecco_means.append(np.array(r_pr).mean())    
-        b = np.array(r_pr).std() / math.sqrt(len(r_pr))
-        prosecco_std.append(1.96 * b)
+    r_pr = prosseco[ds]
+    prosecco_means.append(np.array(r_pr).mean())    
+    b = np.array(r_pr).std() / math.sqrt(len(r_pr))
+    prosecco_std.append(1.96 * b)
 
 print()
 print(len(prosecco_std), len(prefixspan_std))
@@ -88,7 +87,7 @@ rects2 = ax.bar(ind + width/2, prefixspan_means, width, yerr=prefixspan_std,
                 color=flatui[1], label='PrefixSpan', hatch='//')
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_ylabel('Runtime (s)')
+ax.set_ylabel('Total runtime (s)')
 ax.set_xticks(ind)
 ax.set_xticklabels(datasets)
 locs, labels = plt.xticks()
@@ -96,9 +95,9 @@ plt.setp(labels, rotation=45)
 ax.legend(loc='upper right')
 ax.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
 ax.legend()
-ax.set_ylim([0.0, 500000])
+#ax.set_ylim([0.0, 500000])
 
-def autolabel(rects, xpos='center'):
+def autolabel(rects1, rects2, xpos='center'):
     """
     Attach a text label above each bar in *rects*, displaying its height.
 
@@ -110,20 +109,20 @@ def autolabel(rects, xpos='center'):
     ha = {'center': 'center', 'right': 'left', 'left': 'right'}
     offset = {'center': 0.5, 'right': 0.57, 'left': 0.43}  # x_txt = x + w*off
 
-    newlist = sorted(rects, key=lambda x: x.get_x() , reverse=False)
-
+    newlist1 = sorted(rects1, key=lambda x: x.get_x() , reverse=False)
+    newlist2 = sorted(rects2, key=lambda x: x.get_x() , reverse=False)
 
     i = 0
-    for rect in newlist:
-        print(rect.get_x() )
+    for idx, rect in enumerate(newlist1):
         height = rect.get_height()
+        height = max(height, newlist2[idx].get_height())
         text = np.mean(prosseco[datasets[i]]) / np.mean(prefixspan[datasets[i]])
-        ax.text(rect.get_x() + rect.get_width()*offset[xpos], 1.05*height,
+        ax.text(rect.get_x() + rect.get_width()*offset[xpos], 1.05*height + 3,
                 '{:.2f}'.format(text) + 'x', ha=ha[xpos], va='bottom', fontsize=12)
         i += 1
 
 
-autolabel(rects1, "center")
+autolabel(rects1, rects2, "center")
 
 f.savefig('../fig/' + 'runtime.pdf', bbox_inches='tight')
 plt.tight_layout()

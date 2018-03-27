@@ -181,7 +181,10 @@ namespace server {
                             Iteration = iteration,
                             Error = error,
                             BatchRuntimeInMillis = batchStopwatch.ElapsedMilliseconds,
-                            TotalRuntimeInMillis = totalTimeElapsed
+                            TotalRuntimeInMillis = totalTimeElapsed,
+                            LastBlockFileReadingAndParsingTime = miner.LastBlockFileReadingAndParsingTime,
+                            LastBlockPrefixSpanRuntime =  miner.Algorithm.LastBlockPrefixSpanRuntime,
+                            LastBlockSubsequenceMatchingRuntime = miner.Algorithm.LastBlockSubsequenceMatchingRuntime     
                         };
                       
                         var ser = JsonConvert.SerializeObject(frequentSequencePatterns, _jsonSettings);
@@ -195,7 +198,7 @@ namespace server {
                 await responseStream.WriteAsync(new BenchmarkReply
                 {
                     ReplyType = ReplyType.Complete,
-                    TotalRuntimeInMillis = totalTimeElapsed
+                    TotalRuntimeInMillis = totalTimeElapsed                             
                 });
             });
         }

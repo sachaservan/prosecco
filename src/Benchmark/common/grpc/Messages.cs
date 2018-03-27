@@ -28,25 +28,28 @@ namespace Benchmark {
             "ZRgDIAEoARIMCgRGaWxlGAQgASgJEg8KB1N1cHBvcnQYBSABKAESEgoKU2Ft",
             "cGxlU2l6ZRgGIAEoBRIJCgFLGAcgASgFEg8KB1VzZVRvcEsYCCABKAgSDgoG",
             "REJTaXplGAkgASgFEhYKDlNodXRkb3duU2VydmVyGAogASgIIioKC01lbW9y",
-            "eVJlcGx5EhsKE01lbW9yeVVzZ2FnZUluQnl0ZXMYASABKAMi3QEKDkJlbmNo",
+            "eVJlcGx5EhsKE01lbW9yeVVzZ2FnZUluQnl0ZXMYASABKAMi2gIKDkJlbmNo",
             "bWFya1JlcGx5Eg8KB21lc3NhZ2UYASABKAkSFwoPU2VxdWVuY2VzSW5Kc29u",
             "GAMgASgJEhEKCUl0ZXJhdGlvbhgEIAEoBRIaChJOclByb2Nlc3NlZFJlY29y",
             "ZHMYBSABKAUSDQoFRXJyb3IYBiABKAESHAoUQmF0Y2hSdW50aW1lSW5NaWxs",
-            "aXMYByABKAMSHAoUVG90YWxSdW50aW1lSW5NaWxsaXMYCCABKAMSJwoJUmVw",
-            "bHlUeXBlGAkgASgOMhQuYmVuY2htYXJrLlJlcGx5VHlwZSo7CglBbGdvcml0",
-            "aG0SDwoLSVByZWZpeFNwYW4QABIOCgpQcmVmaXhTcGFuEAESDQoJVW5kZWZp",
-            "bmVkEAIqJAoJUmVwbHlUeXBlEgwKCENvbXBsZXRlEAASCQoFQmF0Y2gQATKg",
-            "AQoLQmVuY2htYXJrZXISSgoMcnVuQmVuY2htYXJrEhsuYmVuY2htYXJrLkJl",
-            "bmNobWFya1JlcXVlc3QaGS5iZW5jaG1hcmsuQmVuY2htYXJrUmVwbHkiADAB",
-            "EkUKDW1vbml0b3JNZW1vcnkSGC5iZW5jaG1hcmsuTWVtb3J5UmVxdWVzdBoW",
-            "LmJlbmNobWFyay5NZW1vcnlSZXBseSIAMAFiBnByb3RvMw=="));
+            "aXMYByABKAMSHAoUVG90YWxSdW50aW1lSW5NaWxsaXMYCCABKAMSKgoiTGFz",
+            "dEJsb2NrRmlsZVJlYWRpbmdBbmRQYXJzaW5nVGltZRgJIAEoAxIiChpMYXN0",
+            "QmxvY2tQcmVmaXhTcGFuUnVudGltZRgKIAEoAxIrCiNMYXN0QmxvY2tTdWJz",
+            "ZXF1ZW5jZU1hdGNoaW5nUnVudGltZRgLIAEoAxInCglSZXBseVR5cGUYDCAB",
+            "KA4yFC5iZW5jaG1hcmsuUmVwbHlUeXBlKjgKCUFsZ29yaXRobRIMCghQcm9T",
+            "ZWNDbxAAEg4KClByZWZpeFNwYW4QARINCglVbmRlZmluZWQQAiokCglSZXBs",
+            "eVR5cGUSDAoIQ29tcGxldGUQABIJCgVCYXRjaBABMqABCgtCZW5jaG1hcmtl",
+            "chJKCgxydW5CZW5jaG1hcmsSGy5iZW5jaG1hcmsuQmVuY2htYXJrUmVxdWVz",
+            "dBoZLmJlbmNobWFyay5CZW5jaG1hcmtSZXBseSIAMAESRQoNbW9uaXRvck1l",
+            "bW9yeRIYLmJlbmNobWFyay5NZW1vcnlSZXF1ZXN0GhYuYmVuY2htYXJrLk1l",
+            "bW9yeVJlcGx5IgAwAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Benchmark.Algorithm), typeof(global::Benchmark.ReplyType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.MemoryRequest), global::Benchmark.MemoryRequest.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.BenchmarkRequest), global::Benchmark.BenchmarkRequest.Parser, new[]{ "Id", "Algorithm", "ErrorTolerance", "File", "Support", "SampleSize", "K", "UseTopK", "DBSize", "ShutdownServer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.MemoryReply), global::Benchmark.MemoryReply.Parser, new[]{ "MemoryUsgageInBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.BenchmarkReply), global::Benchmark.BenchmarkReply.Parser, new[]{ "Message", "SequencesInJson", "Iteration", "NrProcessedRecords", "Error", "BatchRuntimeInMillis", "TotalRuntimeInMillis", "ReplyType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Benchmark.BenchmarkReply), global::Benchmark.BenchmarkReply.Parser, new[]{ "Message", "SequencesInJson", "Iteration", "NrProcessedRecords", "Error", "BatchRuntimeInMillis", "TotalRuntimeInMillis", "LastBlockFileReadingAndParsingTime", "LastBlockPrefixSpanRuntime", "LastBlockSubsequenceMatchingRuntime", "ReplyType" }, null, null, null)
           }));
     }
     #endregion
@@ -673,6 +676,9 @@ namespace Benchmark {
       error_ = other.error_;
       batchRuntimeInMillis_ = other.batchRuntimeInMillis_;
       totalRuntimeInMillis_ = other.totalRuntimeInMillis_;
+      lastBlockFileReadingAndParsingTime_ = other.lastBlockFileReadingAndParsingTime_;
+      lastBlockPrefixSpanRuntime_ = other.lastBlockPrefixSpanRuntime_;
+      lastBlockSubsequenceMatchingRuntime_ = other.lastBlockSubsequenceMatchingRuntime_;
       replyType_ = other.replyType_;
     }
 
@@ -758,8 +764,41 @@ namespace Benchmark {
       }
     }
 
+    /// <summary>Field number for the "LastBlockFileReadingAndParsingTime" field.</summary>
+    public const int LastBlockFileReadingAndParsingTimeFieldNumber = 9;
+    private long lastBlockFileReadingAndParsingTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long LastBlockFileReadingAndParsingTime {
+      get { return lastBlockFileReadingAndParsingTime_; }
+      set {
+        lastBlockFileReadingAndParsingTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LastBlockPrefixSpanRuntime" field.</summary>
+    public const int LastBlockPrefixSpanRuntimeFieldNumber = 10;
+    private long lastBlockPrefixSpanRuntime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long LastBlockPrefixSpanRuntime {
+      get { return lastBlockPrefixSpanRuntime_; }
+      set {
+        lastBlockPrefixSpanRuntime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LastBlockSubsequenceMatchingRuntime" field.</summary>
+    public const int LastBlockSubsequenceMatchingRuntimeFieldNumber = 11;
+    private long lastBlockSubsequenceMatchingRuntime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long LastBlockSubsequenceMatchingRuntime {
+      get { return lastBlockSubsequenceMatchingRuntime_; }
+      set {
+        lastBlockSubsequenceMatchingRuntime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "ReplyType" field.</summary>
-    public const int ReplyTypeFieldNumber = 9;
+    public const int ReplyTypeFieldNumber = 12;
     private global::Benchmark.ReplyType replyType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Benchmark.ReplyType ReplyType {
@@ -789,6 +828,9 @@ namespace Benchmark {
       if (Error != other.Error) return false;
       if (BatchRuntimeInMillis != other.BatchRuntimeInMillis) return false;
       if (TotalRuntimeInMillis != other.TotalRuntimeInMillis) return false;
+      if (LastBlockFileReadingAndParsingTime != other.LastBlockFileReadingAndParsingTime) return false;
+      if (LastBlockPrefixSpanRuntime != other.LastBlockPrefixSpanRuntime) return false;
+      if (LastBlockSubsequenceMatchingRuntime != other.LastBlockSubsequenceMatchingRuntime) return false;
       if (ReplyType != other.ReplyType) return false;
       return true;
     }
@@ -803,6 +845,9 @@ namespace Benchmark {
       if (Error != 0D) hash ^= Error.GetHashCode();
       if (BatchRuntimeInMillis != 0L) hash ^= BatchRuntimeInMillis.GetHashCode();
       if (TotalRuntimeInMillis != 0L) hash ^= TotalRuntimeInMillis.GetHashCode();
+      if (LastBlockFileReadingAndParsingTime != 0L) hash ^= LastBlockFileReadingAndParsingTime.GetHashCode();
+      if (LastBlockPrefixSpanRuntime != 0L) hash ^= LastBlockPrefixSpanRuntime.GetHashCode();
+      if (LastBlockSubsequenceMatchingRuntime != 0L) hash ^= LastBlockSubsequenceMatchingRuntime.GetHashCode();
       if (ReplyType != 0) hash ^= ReplyType.GetHashCode();
       return hash;
     }
@@ -842,8 +887,20 @@ namespace Benchmark {
         output.WriteRawTag(64);
         output.WriteInt64(TotalRuntimeInMillis);
       }
-      if (ReplyType != 0) {
+      if (LastBlockFileReadingAndParsingTime != 0L) {
         output.WriteRawTag(72);
+        output.WriteInt64(LastBlockFileReadingAndParsingTime);
+      }
+      if (LastBlockPrefixSpanRuntime != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(LastBlockPrefixSpanRuntime);
+      }
+      if (LastBlockSubsequenceMatchingRuntime != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(LastBlockSubsequenceMatchingRuntime);
+      }
+      if (ReplyType != 0) {
+        output.WriteRawTag(96);
         output.WriteEnum((int) ReplyType);
       }
     }
@@ -871,6 +928,15 @@ namespace Benchmark {
       }
       if (TotalRuntimeInMillis != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalRuntimeInMillis);
+      }
+      if (LastBlockFileReadingAndParsingTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastBlockFileReadingAndParsingTime);
+      }
+      if (LastBlockPrefixSpanRuntime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastBlockPrefixSpanRuntime);
+      }
+      if (LastBlockSubsequenceMatchingRuntime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastBlockSubsequenceMatchingRuntime);
       }
       if (ReplyType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplyType);
@@ -903,6 +969,15 @@ namespace Benchmark {
       }
       if (other.TotalRuntimeInMillis != 0L) {
         TotalRuntimeInMillis = other.TotalRuntimeInMillis;
+      }
+      if (other.LastBlockFileReadingAndParsingTime != 0L) {
+        LastBlockFileReadingAndParsingTime = other.LastBlockFileReadingAndParsingTime;
+      }
+      if (other.LastBlockPrefixSpanRuntime != 0L) {
+        LastBlockPrefixSpanRuntime = other.LastBlockPrefixSpanRuntime;
+      }
+      if (other.LastBlockSubsequenceMatchingRuntime != 0L) {
+        LastBlockSubsequenceMatchingRuntime = other.LastBlockSubsequenceMatchingRuntime;
       }
       if (other.ReplyType != 0) {
         ReplyType = other.ReplyType;
@@ -946,6 +1021,18 @@ namespace Benchmark {
             break;
           }
           case 72: {
+            LastBlockFileReadingAndParsingTime = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            LastBlockPrefixSpanRuntime = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            LastBlockSubsequenceMatchingRuntime = input.ReadInt64();
+            break;
+          }
+          case 96: {
             replyType_ = (global::Benchmark.ReplyType) input.ReadEnum();
             break;
           }
