@@ -26,7 +26,7 @@ public class BatchMiner
     }
 
     Stopwatch _blockProcessingTimer = Stopwatch.StartNew();
-    public long LastBlockFileReadingAndParsingTime = 0;
+    public long PrevBlockFileReadingTime = 0;
 
     public async Task ProcessCSVFile(
         string filepath, 
@@ -59,6 +59,7 @@ public class BatchMiner
         using (var reader = new StreamReader(File.OpenRead(filepath))) 
         {
             _blockProcessingTimer.Restart();
+
             while(!reader.EndOfStream) {
                 // read the current line
                 string line = reader.ReadLine();
@@ -86,7 +87,9 @@ public class BatchMiner
 
                         // update the sample and get back
                         // the error for the sample
+                        _blockProcessingTimer.Stop();
                         var sampleError = _algorithm.AddSequenceBatchToSampleWindow(batch);
+                        _blockProcessingTimer.Start();
 
                         if (!_didGetTopKSupport && _mineTopK) {
                             _minSupport = _algorithm.GetTopKMinSupport(_k);
@@ -142,8 +145,7 @@ public class BatchMiner
         bool purge) 
     {       
 
-        LastBlockFileReadingAndParsingTime = _blockProcessingTimer.ElapsedMilliseconds;
-        _blockProcessingTimer.Restart();
+        PrevBlockFileReadingTime = _blockProcessingTimer.ElapsedMilliseconds;
 
         CurrentIteration++;
 
@@ -171,5 +173,7 @@ public class BatchMiner
         }
 
         await resultDelegate(sequences, results.Item2, CurrentIteration);
+
+        _blockProcessingTimer.Restart();
     }
 }

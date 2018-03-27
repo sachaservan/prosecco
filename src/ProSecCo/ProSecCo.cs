@@ -36,10 +36,10 @@ public class ProSecCo : PrefixSpan
     // performance measurements
     Stopwatch runtimeTimer = Stopwatch.StartNew();
 
-    public long LastBlockPrefixSpanRuntime = 0;
-    public long LastBlockSubsequenceMatchingRuntime = 0;
-    public long LastBlockPruningRuntime = 0;
-
+    public long PrevBlockPrefixSpanRuntime = 0;
+    public long PrevBlockSubsequenceMatchingRuntime = 0;
+    public long PrevBlockPruningRuntime = 0;
+    public long PrevBlockPreProcessingRuntime = 0;
 
     public ProSecCo(double minSupport, bool topK, double errorTolerance, int blockSize, int dbSize) 
         : base()
@@ -55,6 +55,8 @@ public class ProSecCo : PrefixSpan
 
     public double AddSequenceBatchToSampleWindow(List<Sequence> batch) 
     {
+        runtimeTimer.Restart();
+
         for (int i = 0; i < batch.Count; i++)
         {
             _sequences.Add(batch[i]);   
@@ -62,6 +64,8 @@ public class ProSecCo : PrefixSpan
             _metadata.UpdateWithSequence(batch[i]);
         }
 
+        // add the time since there could be multiple sample windows
+        PrevBlockPreProcessingRuntime += runtimeTimer.ElapsedMilliseconds;
                 
         return _metadata.GetError(); 
     }
@@ -78,6 +82,8 @@ public class ProSecCo : PrefixSpan
     
     public void SetNextSequenceBatch(List<Sequence> batch)  
     {
+         runtimeTimer.Restart();
+
         _itemSupportMap = new Dictionary<Item, int>(Item.EqComp);
         _currentBatchSize = batch.Count;
 
@@ -96,12 +102,12 @@ public class ProSecCo : PrefixSpan
         _sequences.CopyTo(seqCpy);
 
         _sequencesCopy = new List<Sequence>(seqCpy);
+
+        PrevBlockPreProcessingRuntime = runtimeTimer.ElapsedMilliseconds;
     }
     
     public Tuple<List<Sequence>, double> FrequentSequences(double minSupport) 
     {  
-        runtimeTimer.Restart();
-
         _minSupport = minSupport;
         
         if (_metadata.NumTransactionsProcessed == 0) 
@@ -122,10 +128,12 @@ public class ProSecCo : PrefixSpan
 
         bool firstBatch = _frequentSequences.Count == 0;
         
+        runtimeTimer.Restart();
+
         var blockSequences = getFrequentSequences(!firstBatch);
 
-        LastBlockPrefixSpanRuntime = runtimeTimer.ElapsedMilliseconds;
-        runtimeTimer.Restart();
+        // compute time it takes to run prefixspan on the block
+        PrevBlockPrefixSpanRuntime = runtimeTimer.ElapsedMilliseconds;
 
         foreach(var sequence in blockSequences)
         {
@@ -138,6 +146,8 @@ public class ProSecCo : PrefixSpan
             }
         }
 
+        runtimeTimer.Restart();
+
         // find the exact support of sequences which did not appear frequent
         // in the current batch
         foreach(var candidate in _misses) 
@@ -149,8 +159,8 @@ public class ProSecCo : PrefixSpan
             }
         }
 
-        LastBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
-        runtimeTimer.Restart();
+        // compute time it takes to do "apriori" on the remaining sequences
+        PrevBlockSubsequenceMatchingRuntime = runtimeTimer.ElapsedMilliseconds;
 
         if (firstBatch)
             _fDictLastBlock = _fDict;
@@ -161,7 +171,7 @@ public class ProSecCo : PrefixSpan
         // reset the PrefixSpan projections
         reset();
    
-        LastBlockPruningRuntime = runtimeTimer.ElapsedMilliseconds;
+        PrevBlockPruningRuntime = runtimeTimer.ElapsedMilliseconds;
 
         return new Tuple<List<Sequence>, double>(sequences, error);
     }

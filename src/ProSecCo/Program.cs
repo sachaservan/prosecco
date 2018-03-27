@@ -126,16 +126,17 @@ namespace ConsoleApplication
             // sort and print        
             frequentSequences.Sort(Sequence.SequenceSorter);
             frequentSequences.ForEach(Console.WriteLine);
-            
+
             Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine("Batch " + iteration);
             Console.WriteLine("Number of frequent sequences:     " + frequentSequences.Count + " sequences");
             Console.WriteLine("Error:  " + error);
             Console.WriteLine("Processing time: " + batchStopwatch.ElapsedMilliseconds + "ms");
             Console.WriteLine("Runtime breakdown: ");
-            Console.WriteLine(" Reading & Parsing:    " + batchMiner.LastBlockFileReadingAndParsingTime + "ms");
-            Console.WriteLine(" PrefixSpan:           " + batchMiner.Algorithm.LastBlockPrefixSpanRuntime + "ms");
-            Console.WriteLine(" Subsequence matching: " + batchMiner.Algorithm.LastBlockSubsequenceMatchingRuntime + "ms");
+            Console.WriteLine(" File reading:         " + batchMiner.PrevBlockFileReadingTime + "ms");
+            Console.WriteLine(" Pre processing:       " + batchMiner.Algorithm.PrevBlockPreProcessingRuntime + "ms");
+            Console.WriteLine(" PrefixSpan:           " + batchMiner.Algorithm.PrevBlockPrefixSpanRuntime + "ms");
+            Console.WriteLine(" Subsequence matching: " + batchMiner.Algorithm.PrevBlockSubsequenceMatchingRuntime + "ms");
             Console.WriteLine("-----------------------------------------------------------\n");
 
                
