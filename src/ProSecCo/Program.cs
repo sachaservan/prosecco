@@ -15,6 +15,8 @@ namespace ConsoleApplication
 
         static double errorTolerance = 0.05;
 
+        static long sumComponentTimes = 0;
+
         public static void Main(string[] args) {
             
             string filePath = "";
@@ -106,7 +108,9 @@ namespace ConsoleApplication
                 Console.WriteLine("Top-k:                  " + k);
             else 
                 Console.WriteLine("Minimum support:        " + minSupport);
-            Console.WriteLine("Total run time:         " + totalTimeElapsed + "ms");
+            Console.WriteLine("Total runtime:          " + totalTimeElapsed + "ms");
+            Console.WriteLine("Component runtime sum:  " + sumComponentTimes + "ms");
+
             Console.WriteLine("********************************************************************************");
 
             return totalTimeElapsed;
@@ -126,6 +130,11 @@ namespace ConsoleApplication
             // sort and print        
             frequentSequences.Sort(Sequence.SequenceSorter);
             frequentSequences.ForEach(Console.WriteLine);
+
+            sumComponentTimes += batchMiner.PrevBlockFileReadingTime;
+            sumComponentTimes += batchMiner.Algorithm.PrevBlockPreProcessingRuntime;
+            sumComponentTimes += batchMiner.Algorithm.PrevBlockPrefixSpanRuntime;
+            sumComponentTimes += batchMiner.Algorithm.PrevBlockSubsequenceMatchingRuntime;
 
             Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine("Batch " + iteration);

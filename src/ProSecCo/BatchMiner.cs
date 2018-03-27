@@ -104,7 +104,9 @@ public class BatchMiner
                         if (sampleError <= _minSupport*0.75) {
                             Console.WriteLine("[DEBUG]: Starting progressive algorithm.");
                             didProcessSampleBlocks = true;
+                            _blockProcessingTimer.Stop();
                             _algorithm.ProcessSampleWindow();
+                            _blockProcessingTimer.Start();
                             await processBatch(batch, resultDelegate, _minSupport, false);
                         } 
 
