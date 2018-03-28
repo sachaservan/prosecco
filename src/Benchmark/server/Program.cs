@@ -182,9 +182,10 @@ namespace server {
                             Error = error,
                             BatchRuntimeInMillis = batchStopwatch.ElapsedMilliseconds,
                             TotalRuntimeInMillis = totalTimeElapsed,
-                            LastBlockFileReadingAndParsingTime = miner.LastBlockFileReadingAndParsingTime,
-                            LastBlockPrefixSpanRuntime =  miner.Algorithm.LastBlockPrefixSpanRuntime,
-                            LastBlockSubsequenceMatchingRuntime = miner.Algorithm.LastBlockSubsequenceMatchingRuntime     
+                            PrevBlockFileReadingTime  = miner.PrevBlockFileReadingTime,
+                            PrevBlockPreProcessingRuntime  =  miner.Algorithm.PrevBlockPreProcessingRuntime,
+                            PrevBlockPrefixSpanRuntime  = miner.Algorithm.PrevBlockPrefixSpanRuntime,
+                            PrevBlockSubsequenceMatchingRuntime = miner.Algorithm.PrevBlockSubsequenceMatchingRuntime     
                         };
                       
                         var ser = JsonConvert.SerializeObject(frequentSequencePatterns, _jsonSettings);

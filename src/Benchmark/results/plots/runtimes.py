@@ -58,20 +58,26 @@ prefixspan_std = []
 datasets = ['BMS-0.03', 'KORSARAK-0.05', 'SIGN-0.40', 'BIBLE-0.40', 'FIFA-0.30']
 datasets = ['BMS-0.03', 'BMS-0.04', 'BMS-0.05', 'KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15', 'SIGN-0.40', 'SIGN-0.50', 'SIGN-0.60', 'BIBLE-0.40', 'BIBLE-0.50', 'BIBLE-0.60', 'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 'ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90']
 prefixspan = runtimes['prefixspan']
-prosseco = runtimes['prosecco']
+prosecco = runtimes['prosecco']
+allprosecco = []
+allprefixspan = []
 for ds in datasets:
     r_ps = prefixspan[ds]
-    
+
+    allprefixspan.append(r_ps)
     prefixspan_means.append(np.array(r_ps).mean())
     b = np.array(r_ps).std() / math.sqrt(len(r_ps))
     prefixspan_std.append(1.96 * b)
 
-    r_pr = prosseco[ds]
+    r_pr = prosecco[ds]
+
+    allprosecco.append(r_pr)
     prosecco_means.append(np.array(r_pr).mean())    
     b = np.array(r_pr).std() / math.sqrt(len(r_pr))
     prosecco_std.append(1.96 * b)
 
-print()
+print('prosecco = ' + '{:.2f}'.format(np.array(allprosecco).mean() / 1000.0))
+print('prefixsp = ' + '{:.2f}'.format(np.array(allprefixspan).mean() / 1000.0))
 print(len(prosecco_std), len(prefixspan_std))
 print(datasets)
 
@@ -116,7 +122,7 @@ def autolabel(rects1, rects2, xpos='center'):
     for idx, rect in enumerate(newlist1):
         height = rect.get_height()
         height = max(height, newlist2[idx].get_height())
-        text = np.mean(prosseco[datasets[i]]) / np.mean(prefixspan[datasets[i]])
+        text = np.mean(prosecco[datasets[i]]) / np.mean(prefixspan[datasets[i]])
         ax.text(rect.get_x() + rect.get_width()*offset[xpos], 1.05*height + 3,
                 '{:.2f}'.format(text) + 'x', ha=ha[xpos], va='bottom', fontsize=12)
         i += 1
