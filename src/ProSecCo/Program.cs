@@ -73,7 +73,7 @@ namespace ConsoleApplication
 
         private static void printHelp(OptionSet p) 
         {
-            Console.WriteLine("Usage: ProSecCo --file: <file-path> (--support: <min-support> | --top-k: <k>) --size: <sample-size>");
+            Console.WriteLine("Usage: ProSecCo --file: <file-path> (--support: <min-support> | --top-k: <k>) --size: <sample-size> -db-size: <database-size>");
             p.WriteOptionDescriptions (Console.Out);
         }
 
@@ -101,15 +101,14 @@ namespace ConsoleApplication
 
             // print out final result stats
             Console.WriteLine("********************************************************************************");
-            Console.WriteLine("Done with Progressive PrefixSpan results.");
+            Console.WriteLine("ProSecCo completed.");
             Console.WriteLine("Number of frequent sequences:     " + numSequences + " sequences");
-            Console.WriteLine("Mining type:            Minimum support mining");
             if (mineTopK) 
                 Console.WriteLine("Top-k:                  " + k);
             else 
                 Console.WriteLine("Minimum support:        " + minSupport);
             Console.WriteLine("Total runtime:          " + totalTimeElapsed + "ms");
-            Console.WriteLine("Component runtime sum:  " + sumComponentTimes + "ms");
+            Console.WriteLine("Sum of runtimes:        " + sumComponentTimes + "ms");
 
             Console.WriteLine("********************************************************************************");
 
@@ -137,15 +136,15 @@ namespace ConsoleApplication
             sumComponentTimes += batchMiner.Algorithm.PrevBlockSubsequenceMatchingRuntime;
 
             Console.WriteLine("-----------------------------------------------------------");
-            Console.WriteLine("Batch " + iteration);
+            Console.WriteLine("Block " + iteration);
             Console.WriteLine("Number of frequent sequences:     " + frequentSequences.Count + " sequences");
             Console.WriteLine("Error:  " + error);
             Console.WriteLine("Processing time: " + batchStopwatch.ElapsedMilliseconds + "ms");
             Console.WriteLine("Runtime breakdown: ");
-            Console.WriteLine(" File reading:         " + batchMiner.PrevBlockFileReadingTime + "ms");
-            Console.WriteLine(" Pre processing:       " + batchMiner.Algorithm.PrevBlockPreProcessingRuntime + "ms");
-            Console.WriteLine(" PrefixSpan:           " + batchMiner.Algorithm.PrevBlockPrefixSpanRuntime + "ms");
-            Console.WriteLine(" Subsequence matching: " + batchMiner.Algorithm.PrevBlockSubsequenceMatchingRuntime + "ms");
+            Console.WriteLine(" -File reading:         " + batchMiner.PrevBlockFileReadingTime + "ms");
+            Console.WriteLine(" -Pre-processing:       " + batchMiner.Algorithm.PrevBlockPreProcessingRuntime + "ms");
+            Console.WriteLine(" -PrefixSpan:           " + batchMiner.Algorithm.PrevBlockPrefixSpanRuntime + "ms");
+            Console.WriteLine(" -Subsequence matching: " + batchMiner.Algorithm.PrevBlockSubsequenceMatchingRuntime + "ms");
             Console.WriteLine("-----------------------------------------------------------\n");
 
                
