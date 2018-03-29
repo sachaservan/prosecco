@@ -25,7 +25,7 @@ sns.set(context='paper', style={'axes.axisbelow': True,
     'grid.color': '.8',
     'grid.linestyle': u'-',
     'image.cmap': u'Greys',
-    'legend.frameon': False,
+    'legend.frameon': True,
     'legend.numpoints': 1,
     'legend.scatterpoints': 1,
     'lines.solid_capstyle': u'butt',
@@ -46,7 +46,12 @@ def minutes_second_formatter(value, tick_number):
     return '%02d:%02d' % (m, s)
 
 def second_formatter(value, tick_number):
-    return int(value / 1000.0)
+    v =  int(value / 1000.0)
+    if value == 0 or v > 0:
+        return v
+    else:
+         return '{:.1f}'.format(value / 1000.0)
+        
 
 def loadPrecisionRecallData(fn):
     d = {'Batch': [], 'Run': [], 'Precision' : [], 'Recall' : [] }
@@ -252,7 +257,9 @@ def main(runtimes, id, file_id, title, show):
     ax1.set_ylabel('Memory (GB)')
     ax1.set_xlabel('Time (mm:ss)')
     ax1.xaxis.set_major_formatter(plt.FuncFormatter(minutes_second_formatter))
-    ax1.legend(loc='center right')
+    legend = ax1.legend(loc='center right')
+    legend.get_frame().set_facecolor('#ffffff')
+    legend.get_frame().set_linewidth(0.0)
     
     f.savefig('../fig/' + file_id + '-memory.pdf', bbox_inches='tight')
     plt.tight_layout()
@@ -273,7 +280,9 @@ def main(runtimes, id, file_id, title, show):
    
     ax2.set_ylabel('Relative Percentage Error')
     ax2.set_xlabel('Block')
-    ax2.legend(loc='upper right')
+    legend = ax2.legend(loc='upper right')   
+    legend.get_frame().set_facecolor('#ffffff')
+    legend.get_frame().set_linewidth(0.0)
     
     f.savefig('../fig/' + file_id + '-error.pdf', bbox_inches='tight')
     plt.tight_layout()
@@ -294,7 +303,9 @@ def main(runtimes, id, file_id, title, show):
 
     ax3.set_ylabel('Precision and Recall')
     ax3.set_xlabel('Block')
-    ax3.legend(loc='lower right')
+    legend = ax3.legend(loc='lower right')
+    legend.get_frame().set_facecolor('#ffffff')
+    legend.get_frame().set_linewidth(0.0)
     ax3.set_ylim([0.0, 1.1])
         
     f.savefig('../fig/' + file_id + '-precision_recall.pdf', bbox_inches='tight')
@@ -315,7 +326,10 @@ def main(runtimes, id, file_id, title, show):
     ax4.set_ylabel('Time (s)')
     ax4.set_xlabel('Block')
     ax4.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
-    ax4.legend(loc='lower right')
+    legend = ax4.legend(loc='best')
+    legend.get_frame().set_facecolor('#ffffff')
+    legend.get_frame().set_linewidth(0.0)
+    ax4.set_ylim(bottom=0)
   
     f.savefig('../fig/' + file_id + '-batch_runtime.pdf', bbox_inches='tight')
     plt.tight_layout()
@@ -336,7 +350,9 @@ def main(runtimes, id, file_id, title, show):
    
     ax5.set_ylabel('Absolute Error')
     ax5.set_xlabel('Block')
-    ax5.legend(loc='upper right')
+    legend = ax5.legend(loc='upper right')
+    legend.get_frame().set_facecolor('#ffffff')
+    legend.get_frame().set_linewidth(0.0)
     
     f.savefig('../fig/' + file_id + '-absolute_error.pdf', bbox_inches='tight')
     plt.tight_layout()
