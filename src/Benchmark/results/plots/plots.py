@@ -257,11 +257,15 @@ def main(runtimes, id, file_id, title, show):
     ax1.set_ylabel('Memory (GB)')
     ax1.set_xlabel('Time (mm:ss)')
     ax1.xaxis.set_major_formatter(plt.FuncFormatter(minutes_second_formatter))
-    legend = ax1.legend(loc='center right')
+    #if title == 'ACCIDENTS-0.80'
+    #    lgegend = ax1.legend(loc='upper right')
+    legend = ax1.legend(loc='best')
+    
     legend.get_frame().set_facecolor('#ffffff')
     legend.get_frame().set_linewidth(0.0)
     
     f.savefig('../fig/' + file_id + '-memory.pdf', bbox_inches='tight')
+    #f.savefig('../fig/' + file_id + '-memory.svg', bbox_inches='tight')
     plt.tight_layout()
    
     if show:
