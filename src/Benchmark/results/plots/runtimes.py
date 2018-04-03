@@ -11,6 +11,7 @@ import datetime
 import matplotlib.dates as mdates
 import os.path
 import pickle
+import matplotlib.patches as patches
 
 def second_formatter(value, tick_number):
     return int(value / 1000.0)
@@ -28,7 +29,7 @@ sns.set(context='paper', style={'axes.axisbelow': True,
     'grid.color': '.8',
     'grid.linestyle': u'-',
     'image.cmap': u'Greys',
-    'legend.frameon': False,
+    'legend.frameon': True,
     'legend.numpoints': 1,
     'legend.scatterpoints': 1,
     'lines.solid_capstyle': u'butt',
@@ -40,7 +41,7 @@ sns.set(context='paper', style={'axes.axisbelow': True,
     'ytick.color': '.15',
     'ytick.direction': u'out',
     'ytick.major.size': 0.0,
-    'ytick.minor.size': 0.0}, font_scale = 1.3)
+    'ytick.minor.size': 0.0}, font_scale = 1.2)
 
 flatui = ['#28aad5', '#b24d94', '#38ae97' ,'#ec7545']
 
@@ -56,7 +57,7 @@ prefixspan_means = []
 prefixspan_std = []
 
 datasets = ['BMS-0.03', 'KORSARAK-0.05', 'SIGN-0.40', 'BIBLE-0.40', 'FIFA-0.30']
-datasets = ['BMS-0.03', 'BMS-0.04', 'BMS-0.05', 'KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15', 'SIGN-0.40', 'SIGN-0.50', 'SIGN-0.60', 'BIBLE-0.40', 'BIBLE-0.50', 'BIBLE-0.60', 'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 'ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90']
+datasets = ['KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15', 'BMS-0.03', 'BMS-0.04', 'BMS-0.05', 'SIGN-0.40', 'SIGN-0.50', 'SIGN-0.60', 'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 'BIBLE-0.40', 'BIBLE-0.50', 'BIBLE-0.60', 'ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90']
 prefixspan = runtimes['prefixspan']
 prosecco = runtimes['prosecco']
 allprosecco = []
@@ -85,23 +86,46 @@ print(datasets)
 ind = np.arange(len(prosecco_means))  # the x locations for the groups
 width = 0.35  # the width of the bars
 
-f, (ax) = plt.subplots(1, 1, sharey=False, figsize=(5, 3.5)) 
+f, (ax) = plt.subplots(1, 1, sharey=False, figsize=(12, 3.0)) 
+#f.subplots_adjust(bottom=0.3)
 
 rects1 = ax.bar(ind - width/2, prosecco_means, width, yerr=prosecco_std,
-                color=flatui[0], label='ProSecCo')
+                color=flatui[0], label='ProSecCo', zorder=10)
 rects2 = ax.bar(ind + width/2, prefixspan_means, width, yerr=prefixspan_std,
-                color=flatui[1], label='PrefixSpan', hatch='//')
+                color=flatui[1], label='PrefixSpan', hatch='//', zorder=10)
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_ylabel('Total runtime (s)')
+ax.set_ylabel('Total Runtime (s)')
 ax.set_xticks(ind)
-ax.set_xticklabels(datasets)
-locs, labels = plt.xticks()
-plt.setp(labels, rotation=45)    
-ax.legend(loc='upper right')
+ax.set_ylim([0.0, 800000])
+
+lookup = {'BMS' : 'BMS-WebView1', 'KORSARAK' : 'Korsarak', 'FIFA' : 'FIFA', 'BIBLE' : 'Bible', 'SIGN' : 'Sign', 'ACCIDENTS' : 'Accidents'}
+
+dslabels = []
+for i, ds in enumerate(datasets):
+    dss = ds.split('-')
+    if (i - 1) % 3 == 0:
+        dslabels.append(dss[1] + '\n' + lookup[dss[0]])
+    else:
+        dslabels.append(dss[1])
+
+    w = rects1[0].get_width()
+    if i % 3 == 0:
+        x = i -w
+        y = -130000
+        plt.plot([x, x], [0, y], 'k-', lw=0.5, color='.8', clip_on=False)
+    if i % 3 == 2:
+        x = i + w
+        y = -130000
+        plt.plot([x, x], [0, y], 'k-', lw=0.5, color='.8', clip_on=False)
+        
+ax.xaxis.grid(False)
+ax.set_xticklabels(dslabels)
+locs, labels = plt.xticks() 
+legend = ax.legend(loc='upper left')
+legend.get_frame().set_facecolor('#ffffff')
+legend.get_frame().set_linewidth(0.0)
 ax.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
-ax.legend()
-#ax.set_ylim([0.0, 500000])
 
 def autolabel(rects1, rects2, xpos='center'):
     """
@@ -123,10 +147,16 @@ def autolabel(rects1, rects2, xpos='center'):
         height = rect.get_height()
         height = max(height, newlist2[idx].get_height())
         text = np.mean(prosecco[datasets[i]]) / np.mean(prefixspan[datasets[i]])
-        ax.text(rect.get_x() + rect.get_width()*offset[xpos], 1.05*height + 3,
-                '{:.2f}'.format(text) + 'x', ha=ha[xpos], va='bottom', fontsize=12)
+
+        x = rect.get_x() + rect.get_width()*offset[xpos]
+        y = 1.05*height + 3
+
+        t = ax.text(x, y, '{:.2f}'.format(text) + 'x', ha=ha[xpos], va='bottom', fontsize=11,
+        backgroundcolor=(1.0, 1.0, 1.0, 0.5))
+        
         i += 1
 
+print(locs)
 
 autolabel(rects1, rects2, "center")
 
