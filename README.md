@@ -1,10 +1,8 @@
 # ProSecCo
-
-#### ProSecCo
+This project contains the C# implementation of the ProSecCo algorithm for frequent sequence mining. 
 See __prosecco.pdf__ for theoretical and experimental results as well as the algorithm description. 
 
 #### Implementation
-This project contains the C# implementation of the ProSecCo algorithm for frequent sequence mining. 
 
 To run:  
 ```
