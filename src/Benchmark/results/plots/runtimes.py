@@ -43,7 +43,7 @@ sns.set(context='paper', style={'axes.axisbelow': True,
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0}, font_scale = 1.2)
 
-flatui = ['#28aad5', '#b24d94', '#38ae97' ,'#ec7545']
+flatui = ['#28aad5', '#C171A9', '#38ae97' ,'#ec7545']
 
 runtimes = {}
 with open('runtimes.pickle', 'rb') as handle:
@@ -57,7 +57,14 @@ prefixspan_means = []
 prefixspan_std = []
 
 datasets = ['BMS-0.03', 'KORSARAK-0.05', 'SIGN-0.40', 'BIBLE-0.40', 'FIFA-0.30']
-datasets = ['KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15', 'BMS-0.03', 'BMS-0.04', 'BMS-0.05', 'SIGN-0.40', 'SIGN-0.50', 'SIGN-0.60', 'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 'BIBLE-0.40', 'BIBLE-0.50', 'BIBLE-0.60', 'ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90']
+datasets = ['ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90',
+            'BIBLE-0.40', 'BIBLE-0.50', 'BIBLE-0.60',
+            'BMS-0.03', 'BMS-0.04', 'BMS-0.05', 
+            'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 
+            'KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15',             
+            'SIGN-0.40', 'SIGN-0.50', 'SIGN-0.60'            
+             
+            ]
 prefixspan = runtimes['prefixspan']
 prosecco = runtimes['prosecco']
 allprosecco = []
@@ -99,7 +106,7 @@ ax.set_ylabel('Total Runtime (s)')
 ax.set_xticks(ind)
 ax.set_ylim([0.0, 800000])
 
-lookup = {'BMS' : 'BMS-WebView1', 'KORSARAK' : 'Korsarak', 'FIFA' : 'FIFA', 'BIBLE' : 'Bible', 'SIGN' : 'Sign', 'ACCIDENTS' : 'Accidents'}
+lookup = {'BMS' : 'BMS-WebView1', 'KORSARAK' : 'Kosarak', 'FIFA' : 'FIFA', 'BIBLE' : 'Bible', 'SIGN' : 'Sign', 'ACCIDENTS' : 'Accidents'}
 
 dslabels = []
 for i, ds in enumerate(datasets):
@@ -122,7 +129,7 @@ for i, ds in enumerate(datasets):
 ax.xaxis.grid(False)
 ax.set_xticklabels(dslabels)
 locs, labels = plt.xticks() 
-legend = ax.legend(loc='upper left')
+legend = ax.legend(loc='upper right')
 legend.get_frame().set_facecolor('#ffffff')
 legend.get_frame().set_linewidth(0.0)
 ax.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
