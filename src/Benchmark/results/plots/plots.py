@@ -225,8 +225,8 @@ def getRuntime(fn):
     
 
 def main(runtimes, id, file_id, title, show):
-    prefixspan = '../ps-' + id + '.json'
-    iprefixspan = '../u_ips-' + id + '.json'
+    prefixspan = '../n_ps-' + id + '-20k.json'
+    iprefixspan = '../n_ips-' + id + '-40k.json'
     
     # eval runtime
     runtimes_ps = getRuntime(prefixspan)
@@ -320,27 +320,28 @@ def main(runtimes, id, file_id, title, show):
     plt.close('all')    
 
     # RuntimePerBatch
-    f, (ax4) = plt.subplots(1, 1, sharey=False, figsize=(5, 3.5)) 
-    
-    d = loadRawData(iprefixspan, 'RuntimePerBatch', 'RuntimePerBatch')
-    df = pd.DataFrame(data=d)  
-    df = df.sort_values(by=['Batch'])
-    plot_ts(df, ax4, flatui[0], 'RuntimePerBatch', 'Batch', 1, 'ProSecCo', displayCumsum=False, linestyle = '-')
+    if False:
+        f, (ax4) = plt.subplots(1, 1, sharey=False, figsize=(5, 3.5)) 
+        
+        d = loadRawData(iprefixspan, 'RuntimePerBatch', 'RuntimePerBatch')
+        df = pd.DataFrame(data=d)  
+        df = df.sort_values(by=['Batch'])
+        plot_ts(df, ax4, flatui[0], 'RuntimePerBatch', 'Batch', 1, 'ProSecCo', displayCumsum=False, linestyle = '-')
 
-    ax4.set_ylabel('Time (s)')
-    ax4.set_xlabel('Block')
-    ax4.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
-    legend = ax4.legend(loc='best')
-    legend.get_frame().set_facecolor('#ffffff')
-    legend.get_frame().set_linewidth(0.0)
-    ax4.set_ylim(bottom=0)
-  
-    f.savefig('../fig/' + file_id + '-batch_runtime.pdf', bbox_inches='tight')
-    plt.tight_layout()
-   
-    if show:
-        plt.show()
-    plt.close('all')
+        ax4.set_ylabel('Time (s)')
+        ax4.set_xlabel('Block')
+        ax4.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
+        legend = ax4.legend(loc='best')
+        legend.get_frame().set_facecolor('#ffffff')
+        legend.get_frame().set_linewidth(0.0)
+        ax4.set_ylim(bottom=0)
+    
+        f.savefig('../fig/' + file_id + '-batch_runtime.pdf', bbox_inches='tight')
+        plt.tight_layout()
+    
+        if show:
+            plt.show()
+        plt.close('all')
     
     # ABS-ERROR
     f, (ax5) = plt.subplots(1, 1, sharey=False, figsize=(5, 3.5)) 

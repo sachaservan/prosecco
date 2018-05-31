@@ -11,6 +11,7 @@ import datetime
 import matplotlib.dates as mdates
 import os.path
 import pickle
+from matplotlib.ticker import MaxNLocator
 
 sns.set(context='paper', style={'axes.axisbelow': True,
     'axes.edgecolor': '.8',
@@ -41,16 +42,8 @@ sns.set(context='paper', style={'axes.axisbelow': True,
 
 flatui = ['#28aad5', '#b24d94', '#38ae97' ,'#ec7545']
 
-def minutes_second_formatter(value, tick_number):
-    m, s = divmod(value / 1000.0, 60)
-    return '%02d:%02d' % (m, s)
-
 def second_formatter(value, tick_number):
-    v =  int(value / 1000.0)
-    if value == 0 or v > 0:
-        return v
-    else:
-         return '{:.1f}'.format(value / 1000.0)
+    return value / 1000
         
 def loadRawData(fn, dataLabel, yLabel):
     d = {'Batch': [], 'Run': [], yLabel : []}
@@ -113,21 +106,25 @@ def plot_ts(df, ax, color, yLabel, xLabel, width, label, linestyle = '-', showMa
     ax.plot(line_x, line_y, color=color, linewidth=3, linestyle=linestyle, label=label)#, label=yLabel)
     
 
-def main(id, file_id, title, show):
-    prefixspan = '../ps-' + id + '.json'
-    iprefixspan = '../u_ips-' + id + '.json'
-    
-    # RuntimePerBatch
+def main(id, supports, samplesize, file_id, show):
+    linestyles = ['-', ':', '--']
     f, (ax4) = plt.subplots(1, 1, sharey=False, figsize=(5, 3.5)) 
-    
-    d = loadRawData(iprefixspan, 'RuntimePerBatch', 'RuntimePerBatch')
-    df = pd.DataFrame(data=d)  
-    df = df.sort_values(by=['Batch'])
-    plot_ts(df, ax4, flatui[0], 'RuntimePerBatch', 'Batch', 1, 'ProSecCo', displayCumsum=False, linestyle = '-')
+
+    for idx, support in enumerate(supports):        
+        iprefixspan = '../n_ips-' + id + '-' + support + '-' + samplesize + '.json'
+        d = loadRawData(iprefixspan, 'RuntimePerBatch', 'RuntimePerBatch')
+        df = pd.DataFrame(data=d)  
+        df = df.sort_values(by=['Batch'])
+        l = len(df['Batch'].unique())
+        w = -1
+        if (l > 60):
+            w = 5
+        plot_ts(df, ax4, flatui[idx], 'RuntimePerBatch', 'Batch', w, support, displayCumsum=False, linestyle = linestyles[idx])
 
     ax4.set_ylabel('Time (s)')
     ax4.set_xlabel('Block')
     ax4.yaxis.set_major_formatter(plt.FuncFormatter(second_formatter))
+    ax4.xaxis.set_major_locator(MaxNLocator(integer=True))
     legend = ax4.legend(loc='best')
     legend.get_frame().set_facecolor('#ffffff')
     legend.get_frame().set_linewidth(0.0)
@@ -135,34 +132,36 @@ def main(id, file_id, title, show):
   
     f.savefig('../fig/' + file_id + '-batch_runtime.pdf', bbox_inches='tight')
     plt.tight_layout()
-   
+    print(file_id)
+
     if show:
         plt.show()
     plt.close('all')
     
 
 if __name__== '__main__':
-    show = True
-    main('seq-accidents-lg-0.80', 'accidents-5-0_80', 'ACCIDENTS-0.80', show)
-    main('seq-accidents-lg-0.85', 'accidents-5-0_85', 'ACCIDENTS-0.85', show)
-    main('seq-accidents-lg-0.90', 'accidents-5-0_90', 'ACCIDENTS-0.90', show)
+    show = False
 
-    main('seq-bms-lg-0.03', 'bms-100-0_03', 'BMS-0.03', show)
-    main('seq-bms-lg-0.04', 'bms-100-0_04', 'BMS-0.04', show)
-    main('seq-bms-lg-0.05', 'bms-100-0_05', 'BMS-0.05', show)
+    main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "20k", 'kosarak-50-20k', show)
+    main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "40k", 'kosarak-50-40k', show)
+    main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "60k", 'kosarak-50-60k', show)
+   
+    main("seq-bms-lg", ["0.03", "0.04", "0.05"], "20k", 'bms-100-20k', show)
+    main("seq-bms-lg", ["0.03", "0.04", "0.05"], "40k", 'bms-100-40k', show)
+    main("seq-bms-lg", ["0.03", "0.04", "0.05"], "60k", 'bms-100-60k', show)
 
-    main('seq-kosarak-lg-0.05', 'kosarak-50-0_05', 'KORSARAK-0.05', show)
-    main('seq-kosarak-lg-0.10', 'kosarak-50-0_10', 'KORSARAK-0.10', show)
-    main('seq-kosarak-lg-0.15', 'kosarak-50-0_15', 'KORSARAK-0.15', show)
-
-    main('seq-sign-lg-0.40', 'sign-200-0_40', 'SIGN-0.40', show)
-    main('seq-sign-lg-0.50', 'sign-200-0_50', 'SIGN-0.50', show)
-    main('seq-sign-lg-0.60', 'sign-200-0_60', 'SIGN-0.60', show)
+    main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "20k", 'accidents-5-20k', show)
+    main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "40k", 'accidents-5-40k', show)
+    main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "60k", 'accidents-5-60k', show)
     
-    main('seq-bible-lg-0.40', 'bible-200-0_40', 'BIBLE-0.40', show)
-    main('seq-bible-lg-0.50', 'bible-200-0_50', 'BIBLE-0.50', show)
-    main('seq-bible-lg-0.60', 'bible-200-0_60', 'BIBLE-0.60', show)
-    
-    main('seq-fifa-lg-0.3', 'fifa-50-0_30', 'FIFA-0.30', show)
-    main('seq-fifa-lg-0.35', 'fifa-50-0_35', 'FIFA-0.35', show)
-    main('seq-fifa-lg-0.4', 'fifa-50-0_40', 'FIFA-0.40', show)
+    main("seq-sign-lg", ["0.40", "0.50", "0.60"], "20k", 'sign-200-20k', show)
+    main("seq-sign-lg", ["0.40", "0.50", "0.60"], "40k", 'sign-200-40k', show)
+    main("seq-sign-lg", ["0.40", "0.50", "0.60"], "60k", 'sign-200-60k', show)
+
+    main("seq-bible-lg", ["0.40", "0.50", "0.60"], "20k", 'bible-200-20k', show)
+    main("seq-bible-lg", ["0.40", "0.50", "0.60"], "40k", 'bible-200-40k', show)
+    main("seq-bible-lg", ["0.40", "0.50", "0.60"], "60k", 'bible-200-60k', show)
+
+    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "20k", 'fifa-50-20k', show)    
+    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "40k", 'fifa-50-40k', show)    
+    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "40k", 'fifa-50-60k', show)
