@@ -94,7 +94,9 @@ def compute(dataset, fsize, name):
     # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_ylabel('Total Runtime (s)')
     ax.set_xticks(ind)
-    ax.set_ylim([0.0, 800000])
+    m = int(max(np.array(allprosecco).max(), np.array(allprefixspan).max()) * 1.2 / 10000) * 10000
+    print(m)
+    ax.set_ylim([0.0, m])
 
     lookup = {'BMS' : 'BMS-WebView1', 'KORSARAK' : 'Kosarak', 'FIFA' : 'FIFA', 'BIBLE' : 'Bible', 'SIGN' : 'Sign', 'ACCIDENTS' : 'Accidents'}
 
@@ -128,7 +130,7 @@ def compute(dataset, fsize, name):
 
     f.savefig('../fig/' + name + '.pdf', bbox_inches='tight')
     plt.tight_layout()
-    #plt.show()
+    plt.show()
 
 
 def autolabel(rects1, rects2, prosecco, prefixspan, datasets, ax, xpos='center'):
