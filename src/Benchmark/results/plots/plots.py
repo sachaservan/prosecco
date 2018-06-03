@@ -370,7 +370,7 @@ def main(runtimes, id, file_id, title, show):
     
 
 if __name__== '__main__':
-    show = False
+    show = True
     
     runtimes = {'prefixspan': {}, 'prosecco': {}}
 

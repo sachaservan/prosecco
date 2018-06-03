@@ -26,6 +26,10 @@ dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 20000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.60-20k
 
 
+dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.40 -z 10000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.40-10k
+dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.50 -z 10000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.50-10k
+dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 10000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.60-10k
+
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.40 -z 40000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.40-40k
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.50 -z 40000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.50-40k
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 40000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.60-40k
@@ -33,3 +37,7 @@ dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.40 -z 60000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.40-60k
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.50 -z 60000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.50-60k
 dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 60000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.60-60k
+
+dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.40 -z 80000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.40-80k
+dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.50 -z 80000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.50-80k
+dotnet run -c Release -- -p 50005 -f ~/data/sequence/seq-sign-lg.txt -s 0.60 -z 80000 -e 0.05 -a ProSecCo -r 5 -d 146000 -i n_ips-seq-sign-lg-0.60-80k
