@@ -45,7 +45,7 @@ sns.set(context='paper', style={'axes.axisbelow': True,
 
 flatui = ['#28aad5', '#C171A9', '#38ae97' ,'#ec7545']
 
-def compute(dataset, fsize, name):
+def compute(dataset, fsize, name, showDivider):
     runtimes = {}
     with open('runtimes.pickle', 'rb') as handle:
         runtimes = pickle.load(handle)
@@ -87,14 +87,14 @@ def compute(dataset, fsize, name):
     #f.subplots_adjust(bottom=0.3)
 
     rects1 = ax.bar(ind - width/2, prosecco_means, width, yerr=prosecco_std,
-                    color=flatui[0], label='ProSecCo', zorder=10)
+                    color=flatui[0], label='ProSecCo')
     rects2 = ax.bar(ind + width/2, prefixspan_means, width, yerr=prefixspan_std,
-                    color=flatui[1], label='PrefixSpan', hatch='//', zorder=10)
+                    color=flatui[1], label='PrefixSpan', hatch='//')
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_ylabel('Total Runtime (s)')
     ax.set_xticks(ind)
-    m = int(max(np.array(allprosecco).max(), np.array(allprefixspan).max()) * 1.2 / 10000) * 10000
+    m = int(max(np.array(allprosecco).max(), np.array(allprefixspan).max()) * 1.3 / 10000) * 10000
     print(m)
     ax.set_ylim([0.0, m])
 
@@ -109,14 +109,15 @@ def compute(dataset, fsize, name):
             dslabels.append(dss[1])
 
         w = rects1[0].get_width()
-        if i % 3 == 0:
-            x = i -w
-            y = -130000
-            plt.plot([x, x], [0, y], 'k-', lw=0.5, color='.8', clip_on=False)
-        if i % 3 == 2:
-            x = i + w
-            y = -130000
-            plt.plot([x, x], [0, y], 'k-', lw=0.5, color='.8', clip_on=False)
+        if showDivider:
+            if i % 3 == 0:
+                x = i -w
+                y = -130000
+                plt.plot([x, x], [0, y], 'k-', lw=0.5, color='.8', clip_on=False)
+            if i % 3 == 2:
+                x = i + w
+                y = -130000
+                plt.plot([x, x], [0, y], 'k-', lw=0.5, color='.8', clip_on=False)
             
     ax.xaxis.grid(False)
     ax.set_xticklabels(dslabels)
@@ -151,14 +152,18 @@ def autolabel(rects1, rects2, prosecco, prefixspan, datasets, ax, xpos='center')
     i = 0
     for idx, rect in enumerate(newlist1):
         height = rect.get_height()
-        height = max(height, newlist2[idx].get_height())
+        h_pr = np.mean(prosecco[datasets[i]]) + (np.array(prosecco[datasets[i]]).std() / math.sqrt(len(prosecco[datasets[i]]))) * 1.96
+        h_ps = np.mean(prefixspan[datasets[i]]) + (np.array(prefixspan[datasets[i]]).std() / math.sqrt(len(prefixspan[datasets[i]]))) * 1.96
+      
+        height = max(h_pr, h_ps)
+
+        print(height)
         text = np.mean(prosecco[datasets[i]]) / np.mean(prefixspan[datasets[i]])
 
         x = rect.get_x() + rect.get_width()*offset[xpos]
-        y = 1.05*height + 3
+        y = height + 5
 
-        t = ax.text(x, y, '{:.2f}'.format(text) + 'x', ha=ha[xpos], va='bottom', fontsize=11,
-        backgroundcolor=(1.0, 1.0, 1.0, 0.5))
+        t = ax.text(x, y, '{:.2f}'.format(text) + 'x', ha=ha[xpos], va='bottom', fontsize=11)# backgroundcolor=(1.0, 1.0, 1.0, 0.5))
         
         i += 1
 
@@ -170,16 +175,16 @@ datasets = ['ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90',
             'BMS-0.03', 'BMS-0.04', 'BMS-0.05', 
             'FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40', 
             'KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15']
-compute(datasets, (12, 3.0), 'runtime')
+compute(datasets, (12, 3.0), 'runtime', True)
 
 datasets = ['ACCIDENTS-0.80', 'ACCIDENTS-0.85', 'ACCIDENTS-0.90']
-compute(datasets, (5, 3.5), 'runtime_accidents')
+compute(datasets, (5, 3.5), 'runtime_accidents', False)
 
 datasets = ['BMS-0.03', 'BMS-0.04', 'BMS-0.05']
-compute(datasets, (5, 3.5), 'runtime_bms')
+compute(datasets, (5, 3.5), 'runtime_bms', False)
 
 datasets = ['FIFA-0.30', 'FIFA-0.35', 'FIFA-0.40']
-compute(datasets, (5, 3.5), 'runtime_fifa')
+compute(datasets, (5, 3.5), 'runtime_fifa', False)
 
 datasets = ['KORSARAK-0.05', 'KORSARAK-0.10', 'KORSARAK-0.15']
-compute(datasets, (5, 3.5), 'runtime_kosarak')
+compute(datasets, (5, 3.5), 'runtime_kosarak', False)

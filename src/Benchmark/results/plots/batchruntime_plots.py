@@ -142,26 +142,37 @@ def main(id, supports, samplesize, file_id, show):
 if __name__== '__main__':
     show = False
 
+    main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "10k", 'kosarak-50-10k', show)
     main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "20k", 'kosarak-50-20k', show)
     main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "40k", 'kosarak-50-40k', show)
     main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "60k", 'kosarak-50-60k', show)
+    main("seq-kosarak-lg", ["0.05", "0.10", "0.15"], "80k", 'kosarak-50-80k', show)
    
+    main("seq-bms-lg", ["0.03", "0.04", "0.05"], "10k", 'bms-100-10k', show)
     main("seq-bms-lg", ["0.03", "0.04", "0.05"], "20k", 'bms-100-20k', show)
     main("seq-bms-lg", ["0.03", "0.04", "0.05"], "40k", 'bms-100-40k', show)
-    main("seq-bms-lg", ["0.03", "0.04", "0.05"], "60k", 'bms-100-60k', show)
+    main("seq-bms-lg", ["0.03", "0.04", "0.05"], "80k", 'bms-100-80k', show)
 
+    main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "10k", 'accidents-5-10k', show)
     main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "20k", 'accidents-5-20k', show)
     main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "40k", 'accidents-5-40k', show)
     main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "60k", 'accidents-5-60k', show)
+    main("seq-accidents-lg", ["0.80", "0.85", "0.90"], "80k", 'accidents-5-80k', show)
     
+    main("seq-sign-lg", ["0.40", "0.50", "0.60"], "10k", 'sign-200-10k', show)
     main("seq-sign-lg", ["0.40", "0.50", "0.60"], "20k", 'sign-200-20k', show)
     main("seq-sign-lg", ["0.40", "0.50", "0.60"], "40k", 'sign-200-40k', show)
     main("seq-sign-lg", ["0.40", "0.50", "0.60"], "60k", 'sign-200-60k', show)
+    main("seq-sign-lg", ["0.40", "0.50", "0.60"], "80k", 'sign-200-80k', show)
 
+    main("seq-bible-lg", ["0.40", "0.50", "0.60"], "10k", 'bible-200-10k', show)
     main("seq-bible-lg", ["0.40", "0.50", "0.60"], "20k", 'bible-200-20k', show)
     main("seq-bible-lg", ["0.40", "0.50", "0.60"], "40k", 'bible-200-40k', show)
     main("seq-bible-lg", ["0.40", "0.50", "0.60"], "60k", 'bible-200-60k', show)
+    main("seq-bible-lg", ["0.40", "0.50", "0.60"], "80k", 'bible-200-80k', show)
 
+    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "10k", 'fifa-50-10k', show)   
     main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "20k", 'fifa-50-20k', show)    
     main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "40k", 'fifa-50-40k', show)    
-    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "40k", 'fifa-50-60k', show)
+    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "40k", 'fifa-50-60k', show)  
+    main("seq-fifa-lg", ["0.3", "0.35", "0.4"], "80k", 'fifa-50-80k', show)

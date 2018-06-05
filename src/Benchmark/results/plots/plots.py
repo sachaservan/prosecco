@@ -226,7 +226,7 @@ def getRuntime(fn):
 
 def main(runtimes, id, file_id, title, show):
     prefixspan = '../n_ps-' + id + '-20k.json'
-    iprefixspan = '../n_ips-' + id + '-40k.json'
+    iprefixspan = '../n_ips-' + id + '-10k.json'
     
     # eval runtime
     runtimes_ps = getRuntime(prefixspan)
@@ -370,7 +370,7 @@ def main(runtimes, id, file_id, title, show):
     
 
 if __name__== '__main__':
-    show = True
+    show = False
     
     runtimes = {'prefixspan': {}, 'prosecco': {}}
 
